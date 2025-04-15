@@ -37,7 +37,7 @@ html {
 
 h1,
 h2 {
-  @apply text-heading font-passion-one;
+  @apply text-heading font-passion-one leading-11;
 }
 
 h3,
@@ -58,6 +58,14 @@ li {
 input,
 textarea {
   @apply text-black;
+}
+
+a {
+  @apply text-link-blue;
+}
+
+a:hover {
+  @apply tablet:text-link-blue/75;
 }
 
 .spinner-submit {
@@ -115,6 +123,18 @@ textarea {
 
   to {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes scale {
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.025);
   }
 }
 

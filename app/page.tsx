@@ -1,17 +1,100 @@
+import Image from "next/image";
+import Link from "next/link";
+
 export default function Home() {
   return (
-    <div>
-      <h1>Heading 1</h1>
-      <h3>Subheading 2</h3>
-      <h5>Subheading</h5>
-      <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam
-        adipisci atque iste unde voluptate voluptatum consequuntur quaerat fuga
-        qui repudiandae dicta nesciunt eligendi distinctio doloremque, quia
-        praesentium delectus? Itaque aliquam, laboriosam voluptatum doloribus
-        eum similique! Animi obcaecati repellendus ullam dolorem repudiandae.
-        Quisquam illo non expedita nihil autem ut iusto repudiandae.
-      </p>
-    </div>
+    <main className=" mx-5 my-10 grid place-items-center">
+      <div className="max-w-[1360px] space-y-10">
+        <div className="flex flex-col items-center justify-center bg-white">
+          <div className="animate-[scale_2.5s_ease-in-out_infinite]">
+            <Image
+              src="/logo/maple-ranch-logo.png"
+              alt="Maple Ranch Logo"
+              className="w-[300px] object-contain"
+              width={400}
+              height={400}
+              priority
+            />
+          </div>
+          <h1 className="mt-8 text-heading text-center text-gray-800 max-w-[450px] tablet:max-w-max">
+            The new home of Maple Ranch is coming soon!
+          </h1>
+        </div>
+        <div>
+          <ul className="grid gap-10 tablet:grid-cols-2">
+            <li className="space-y-5">
+              <Image
+                src="/images/placeholders/restaurant.jpg"
+                alt="Moss & Maple Restaurant"
+                width={300}
+                height={300}
+                className="w-full object-cover aspect-square"
+              />
+              <h3 className="text-center mb-2">Moss & Maple Restaurant</h3>
+              <ul className="grid place-items-center gap-2">
+                <li>
+                  Tel:{" "}
+                  <Link
+                    href="tel:+27726946801"
+                    className="p-2 -m-2 desktop:p-0 desktop:m-0"
+                  >
+                    072 694 6801
+                  </Link>
+                </li>
+                <li>
+                  Email:{" "}
+                  <Link
+                    href="mailto:mossnmaple@gmail.com"
+                    className="p-2 -m-2 desktop:p-0 desktop:m-0"
+                    target="_blank"
+                  >
+                    mossnmaple@gmail.com
+                  </Link>
+                </li>
+              </ul>
+            </li>
+            <hr className="w-1/2 mx-auto tablet:hidden" />
+            <li className="space-y-5">
+              <Image
+                src="/images/placeholders/adventures.jpg"
+                alt="Moss Adventures"
+                width={300}
+                height={300}
+                className="w-full object-cover aspect-square"
+              />
+              <h3 className="text-center mb-2">Maple Adventures</h3>
+              <ul className="grid place-items-center gap-2">
+                <li>
+                  Tel:{" "}
+                  <Link
+                    href="tel:+27722142510"
+                    className="p-2 -m-2 desktop:p-0 desktop:m-0"
+                  >
+                    072 214 2510
+                  </Link>
+                </li>
+                <li>
+                  Email:{" "}
+                  <Link
+                    href="mailto:adventures@mapleranch.co.za"
+                    className="p-2 -m-2 desktop:p-0 desktop:m-0"
+                    target="_blank"
+                  >
+                    adventures@mapleranch.co.za
+                  </Link>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <footer>
+        <div className="flex flex-col items-center justify-center mt-10">
+          <p className="text-sm text-gray-500">
+            &copy; {new Date().getFullYear()} Maple Ranch. All rights reserved.
+          </p>
+        </div>
+      </footer>
+    </main>
   );
 }
