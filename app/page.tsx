@@ -51,6 +51,15 @@ export default function Home() {
                     mossnmaple@gmail.com
                   </Link>
                 </li>
+                <li>
+                  <Link
+                    href="/files/moss_and_maple_menu.pdf"
+                    className="p-2 -m-2 desktop:p-0 desktop:m-0"
+                    target="_blank"
+                  >
+                    View menu
+                  </Link>
+                </li>
               </ul>
             </li>
             <hr className="w-1/2 mx-auto tablet:hidden" />
@@ -62,15 +71,15 @@ export default function Home() {
                 height={300}
                 className="w-full object-cover aspect-square"
               />
-              <h3 className="text-center mb-2">Maple Adventures</h3>
+              <h3 className="text-center mb-2">Maple Ranch Adventures</h3>
               <ul className="grid place-items-center gap-2">
                 <li>
                   Tel:{" "}
                   <Link
-                    href="tel:+27722142510"
+                    href="tel:+27650542562"
                     className="p-2 -m-2 desktop:p-0 desktop:m-0"
                   >
-                    072 214 2510
+                    065 054 2562
                   </Link>
                 </li>
                 <li>
