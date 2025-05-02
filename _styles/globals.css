@@ -60,7 +60,8 @@ textarea {
   @apply text-black;
 }
 
-a {
+a,
+address {
   @apply text-link-blue;
 }
 

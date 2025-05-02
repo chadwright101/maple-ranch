@@ -21,6 +21,17 @@ export default function Home() {
           </h1>
         </div>
         <div>
+          <Link
+            href="https://maps.app.goo.gl/tC7RxQrepTCywfxN7"
+            aria-label="Maple Ranch Location"
+            target="_blank"
+          >
+            <address className="italic text-center">
+              Farm 541 Cragsview, Plettenberg Bay, 6600
+            </address>
+          </Link>
+        </div>
+        <div>
           <ul className="grid gap-10 tablet:grid-cols-2">
             <li className="space-y-5">
               <Image
