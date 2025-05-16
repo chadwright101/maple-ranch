@@ -1,3 +1,5 @@
+import { Footer } from "@/_components/navigation/footer/footer";
+import { Header } from "@/_components/navigation/header/header";
 import "@/_styles/globals.css";
 
 import { Passion_One, PT_Sans } from "next/font/google";
@@ -22,7 +24,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${PTSans.variable} ${PassionOne.variable} antialiased`}>
+        <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
