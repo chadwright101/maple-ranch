@@ -1,0 +1,16 @@
+{
+  "contact": {
+    "adventures": {
+      "phone": "1345345",
+      "email": "adventures@mapleranch.co.za"
+    },
+    "restaurant": {
+      "phone": "1345345",
+      "email": "restaurant@mapleranch.co.za"
+    }
+  },
+  "heroGallery": [
+    "/images/placeholders/adventures.jpg",
+    "/images/placeholders/restaurant.jpg"
+  ]
+}

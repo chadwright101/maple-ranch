@@ -42,7 +42,7 @@ export function MobileHeader({ isScrolled }: HeaderProps) {
               "scale-86 translate-y-2.5": isScrolled,
             })}
           />
-          <h1
+          <h2
             className={classNames(
               "text-[24px] font-normal flex flex-col ease-in-out duration-300",
               {
@@ -53,7 +53,7 @@ export function MobileHeader({ isScrolled }: HeaderProps) {
           >
             Maple Ranch{" "}
             <span className="text-[14px] -mt-6">Plettenberg Bay</span>
-          </h1>
+          </h2>
         </Link>
 
         <button

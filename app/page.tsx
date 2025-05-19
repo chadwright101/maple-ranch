@@ -1,10 +1,11 @@
-import Image from "next/image";
-import Link from "next/link";
+import HeroComponent from "@/_components/pages/home/hero/hero-component";
 
 export default function Home() {
   return (
-    <main className=" mx-5 my-10 grid place-items-center">
-      <div className="max-w-[1360px] space-y-10">
+    <div className="max-w-[1360px] space-y-10 mx-auto">
+      <HeroComponent />
+
+      {/* <div className="max-w-[1360px] space-y-10">
         <div className="flex flex-col items-center justify-center bg-white">
           <div className="animate-[scale_2.5s_ease-in-out_infinite]">
             <Image
@@ -114,7 +115,7 @@ export default function Home() {
             &copy; {new Date().getFullYear()} Maple Ranch. All rights reserved.
           </p>
         </div>
-      </footer>
-    </main>
+      </footer> */}
+    </div>
   );
 }
