@@ -26,7 +26,7 @@ const HeroComponent = () => {
         />
         <div className="grid place-items-center desktop:place-items-start">
           <p className="text-[2rem] uppercase">Welcome to</p>
-          <h1 className="grid gap-1.5 place-items-center border-y-4 border-blue/75 pt-4 pb-0.5 mt-1.5 font-passion-one text-[3.75rem] desktop:place-items-start desktop:text-[4.5rem] desktop:pt-5 desktop:pb-1.5">
+          <h1 className="grid gap-1.5 place-items-center border-y-4 border-red/75 pt-4 pb-0.5 mt-1.5 font-passion-one text-[3.75rem] desktop:place-items-start desktop:text-[4.5rem] desktop:pt-5 desktop:pb-1.5">
             Maple Ranch
             <span className="text-[1.25rem] uppercase desktop:text-[1.75rem] desktop:normal-case">
               Plettenberg Bay

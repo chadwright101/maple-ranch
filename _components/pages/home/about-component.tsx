@@ -8,10 +8,12 @@ const AboutComponent = () => {
         alt="About us - Maple Ranch"
         width={750}
         height={750}
-        className="w-full h-auto object-cover aspect-square tablet:hidden"
+        className="w-full h-auto object-cover aspect-square phone:aspect-video tablet:hidden"
       />
       <main className="space-y-5">
-        <h2>About Us</h2>
+        <h2 className="text-heading font-passion-one border-b-4 border-gold leading-12">
+          About Us
+        </h2>
         <div className="desktop:grid gap-10 desktop:grid-cols-3">
           <div className="space-y-4 desktop:order-last">
             <p>
@@ -52,14 +54,14 @@ const AboutComponent = () => {
               alt="About Us - Maple Ranch"
               width={400}
               height={400}
-              className="w-full h-full object-cover aspect-square desktop:aspect-auto desktop:order-last desktop:h-[250px]"
+              className="w-full h-full object-cover aspect-square phone:aspect-video desktop:aspect-auto desktop:order-last desktop:h-[250px]"
             />
             <Image
               src="/images/home-page/20250413_091930.jpg"
               alt="About Us - Maple Ranch"
               width={400}
               height={800}
-              className="w-full h-full object-cover aspect-square desktop:aspect-auto desktop:row-span-2"
+              className="w-full h-full object-cover aspect-square phone:aspect-video desktop:aspect-auto desktop:row-span-2"
             />
           </div>
         </div>
