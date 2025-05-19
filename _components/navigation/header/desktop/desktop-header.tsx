@@ -9,7 +9,7 @@ export function DesktopHeader({ isScrolled }: HeaderProps) {
   return (
     <div
       className={classNames(
-        "hidden relative py-5 px-25 items-end justify-between h-[100px] desktop:flex ease-in-out duration-500 desktop:duration-500",
+        "hidden desktop:flex relative py-5 items-end justify-between h-[100px] ease-in-out duration-500 desktop:duration-500",
         {}
       )}
     >
@@ -23,7 +23,7 @@ export function DesktopHeader({ isScrolled }: HeaderProps) {
           className={classNames(
             "absolute h-[171px] w-auto -mt-15 ease-in-out duration-500",
             {
-              "scale-30 -mt-[106px]": isScrolled,
+              "scale-30 -mt-[105px] -ml-15": isScrolled,
             }
           )}
         />

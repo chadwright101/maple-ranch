@@ -25,14 +25,14 @@ export function Header() {
   return (
     <header
       className={classNames(
-        "sticky left-0 border-b-2 border-blue/25 mx-auto bg-white z-50 ease-in-out duration-500 desktop:duration-500",
+        "sticky left-0 border-b-2 border-blue/25 bg-white z-50 ease-in-out duration-500 desktop:duration-500",
         {
           "-top-5": isScrolled,
           "top-0": !isScrolled,
         }
       )}
     >
-      <div className="max-w-[1280px] mx-auto relative">
+      <div className="max-w-[1360px] mx-auto relative desktop:px-15">
         <MobileHeader isScrolled={isScrolled} />
         <DesktopHeader isScrolled={isScrolled} />
       </div>

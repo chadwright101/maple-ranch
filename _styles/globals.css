@@ -39,7 +39,7 @@
 
   h1,
   h2 {
-    @apply font-passion-one leading-11 font-normal;
+    @apply font-passion-one leading-11 font-normal text-heading;
   }
 
   h3,
