@@ -115,7 +115,7 @@ const ContactSection = ({ department = "general" }: ContactSectionProps) => {
               target="_blank"
               className="text-paragraph text-linkBlue phone:text-left tablet:hover:text-pink text-link tablet:hover:text-black/80"
             >
-              Pinehaven Rd, Keurbooms Heights, Plettenberg Bay, 6600
+              Farm 541 Cragsview, Plettenberg Bay, 6600
             </Link>
           </div>
         </div>
