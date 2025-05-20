@@ -1,14 +1,18 @@
 {
   "heroGallery": [
-    "/images/placeholders/adventures.jpg",
-    "/images/placeholders/restaurant.jpg"
+    "/images/hero-slider/IMG-20231018-WA0103.jpg",
+    "/images/hero-slider/20230407_083744.jpg",
+    "/images/placeholders/restaurant.jpg",
+    "/images/hero-slider/20230407_084013.jpg",
+    "/images/hero-slider/Screenshot_20231202-180417_Facebook.jpg",
+    "/images/hero-slider/20240102_153437.jpg"
   ],
   "offerings": [
     {
       "heading": "Adventures",
-      "description": "Lorem ipsum dolor sit amet consectetur. Ut mauris augue volutpat rhoncus volutpat volutpat eget dui. Gravida est id tristique libero malesuada amet non at. Elementum sed praesent faucibus mattis. Volutpat consectetur nec orci erat praesent quam tortor egestas. Aliquet odio massa imperdiet ut nunc suscipit molestie purus. Placerat ipsum ultricies sed nascetur. Fames molestie ut mauris maecenas amet turpis.",
-      "image1": "/images/home-page/offerings/adventures/360_F_179944965_Q9eITreWbC1XSOcziFXIwNELZN3ZBOaS.jpg",
-      "image2": "/images/home-page/offerings/adventures/family-enjoying-serene-river-kayaking-adventure-sunny-summer-day_38013-74076.jpg",
+      "description": "Maple Ranch Adventures offers transformative team building events and school camps in our unique farmyard setting just 15 minutes from Plettenberg Bay. Our spacious Farm Field accommodates diverse activities while providing a refreshing outdoor experience without leaving the city. For schools, we deliver customized programs with comfortable lodging, full catering, and professional facilitation focused on building leadership, confidence and connection. Our experienced team prioritizes safety and creates meaningful experiences for all participants in our picturesque horse ranch environment.",
+      "image1": "/images/home-page/offerings/adventures/Picture-2.jpg",
+      "image2": "/images/home-page/offerings/adventures/IMG_8272.jpg",
       "buttonUrl": "/adventures",
       "phone": "+27 65 054 2562",
       "email": "adventures@mapleranch.co.za"
@@ -16,8 +20,8 @@
     {
       "heading": "Moss & Maple Restaurant",
       "description": "Lorem ipsum dolor sit amet consectetur. Ut mauris augue volutpat rhoncus volutpat volutpat eget dui. Gravida est id tristique libero malesuada amet non at. Elementum sed praesent faucibus mattis. Volutpat consectetur nec orci erat praesent quam tortor egestas. Aliquet odio massa imperdiet ut nunc suscipit molestie purus. Placerat ipsum ultricies sed nascetur. Fames molestie ut mauris maecenas amet turpis.",
-      "image1": "/images/home-page/offerings/restaurant/20230527_070121.jpg",
-      "image2": "/images/home-page/offerings/restaurant/Screenshot_20231005-235649_Chrome.jpg",
+      "image1": "/images/home-page/offerings/restaurant/20230407_083240.jpg",
+      "image2": "/images/home-page/offerings/restaurant/20230527_070121.jpg",
       "buttonUrl": "/restaurant",
       "phone": "+27 72 694 6801",
       "email": "mossnmaple@gmail.com",

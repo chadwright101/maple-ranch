@@ -45,21 +45,21 @@ const AboutComponent = () => {
           </div>
           <div className="grid gap-10 mt-10 tablet:grid-cols-3 desktop:grid-cols-2 desktop:mt-0 desktop:col-span-2">
             <Image
-              src="/images/home-page/20241116_111757.jpg"
+              src="/images/home-page/IMG-20231018-WA0103.jpg"
               alt="About Us - Maple Ranch"
               width={400}
               height={400}
               className="hidden w-full h-full object-cover tablet:block desktop:aspect-auto desktop:h-[250px]"
             />
             <Image
-              src="/images/home-page/IMG-20231018-WA0103.jpg"
+              src="/images/home-page/20241116_111757.jpg"
               alt="About Us - Maple Ranch"
               width={400}
               height={400}
               className="w-full h-full object-cover aspect-square phone:aspect-video desktop:aspect-auto desktop:order-last desktop:h-[250px]"
             />
             <Image
-              src="/images/home-page/20250413_091930.jpg"
+              src="/images/home-page/20230419_101843.jpg"
               alt="About Us - Maple Ranch"
               width={400}
               height={800}

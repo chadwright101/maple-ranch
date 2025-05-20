@@ -18,7 +18,7 @@ const MapComponent = ({ cssClasses }: Props) => {
     );
   return (
     <GoogleMap
-      zoom={11.75}
+      zoom={12.75}
       center={{ lat: -33.9855202, lng: 23.4353273 }}
       mapContainerClassName={cssClasses}
     >
