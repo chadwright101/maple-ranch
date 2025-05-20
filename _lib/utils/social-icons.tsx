@@ -16,7 +16,7 @@ const SocialIcons = ({ cssClasses, small }: Props) => {
       <ul className={`flex gap-2 ${cssClasses}`}>
         <li>
           <Link
-            href="https://www.facebook.com/arlenespools"
+            href="https://www.facebook.com/Mossandmaple17/"
             target="_blank"
             className="tablet:tablet:hover:opacity-80 ease-in-out duration-200"
             aria-label="View our Facebook page"
@@ -29,7 +29,7 @@ const SocialIcons = ({ cssClasses, small }: Props) => {
             />
           </Link>
         </li>
-        <li>
+        {/*         <li>
           <Link
             href=""
             target="_blank"
@@ -43,7 +43,7 @@ const SocialIcons = ({ cssClasses, small }: Props) => {
               height={20}
             />
           </Link>
-        </li>
+        </li> */}
       </ul>
     );
   } else {
@@ -51,7 +51,7 @@ const SocialIcons = ({ cssClasses, small }: Props) => {
       <ul className={`flex gap-6 ${cssClasses}`}>
         <li>
           <Link
-            href=""
+            href="https://www.facebook.com/Mossandmaple17/"
             className="grid place-items-center tablet:hover:opacity-80 ease-in-out duration-200 p-2 -m-2"
             target="_blank"
             aria-label="View our Facebook page"
@@ -64,9 +64,9 @@ const SocialIcons = ({ cssClasses, small }: Props) => {
             />
           </Link>
         </li>
-        <li>
+        {/*         <li>
           <Link
-            href="https://wa.me/message/WCHULFMQ26MMK1"
+            href=""
             className="grid place-items-center tablet:hover:opacity-80 ease-in-out duration-200 p-2 -m-2"
             target="_blank"
             aria-label="Get in touch on WhatsApp"
@@ -78,7 +78,7 @@ const SocialIcons = ({ cssClasses, small }: Props) => {
               height={28}
             />
           </Link>
-        </li>
+        </li> */}
       </ul>
     );
   }

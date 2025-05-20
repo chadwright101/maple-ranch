@@ -4,6 +4,7 @@ import DividerLine from "@/_lib/utils/divider-line";
 
 import offeringsData from "@/_data/general-data.json";
 import OfferingsComponent from "@/_components/pages/home/offerings-component";
+import ContactSection from "@/_components/pages/home/contact/contact-section";
 
 const { offerings } = offeringsData;
 
@@ -26,6 +27,7 @@ export default function Home() {
         ))}
       </div>
       <DividerLine containerClasses="mx-5 desktop:hidden" />
+      <ContactSection />
     </div>
   );
 }

@@ -11,9 +11,11 @@ const AboutComponent = () => {
         className="w-full h-auto object-cover aspect-square phone:aspect-video tablet:hidden"
       />
       <main className="space-y-5">
-        <h2 className="text-heading font-passion-one border-b-4 border-gold leading-12">
-          About Us
-        </h2>
+        <div className="grid desktop:grid-cols-3 gap-10">
+          <h2 className="text-heading font-passion-one border-b-4 border-gold leading-12">
+            About Us
+          </h2>
+        </div>
         <div className="desktop:grid gap-10 desktop:grid-cols-3">
           <div className="space-y-4 desktop:order-last">
             <p>
