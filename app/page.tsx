@@ -16,17 +16,29 @@ export default function Home() {
       <AboutComponent />
       <div>
         {offerings.map((offering, index) => (
-          <OfferingsComponent
-            data={offering}
-            key={index}
-            index={index}
-            backgroundBlue={index % 2 === 0}
-            reverse={index % 2 === 0}
-            buttonColor={index % 2 === 0 ? "gold" : "red"}
-          />
+          <div key={index}>
+            <div
+              id={
+                offering.heading === "Adventures"
+                  ? "adventures"
+                  : offering.heading === "Moss & Maple Restaurant"
+                  ? "restaurant"
+                  : ""
+              }
+              className="-translate-y-24"
+            />
+            <OfferingsComponent
+              data={offering}
+              index={index}
+              backgroundBlue={index % 2 === 0}
+              reverse={index % 2 === 0}
+              buttonColor={index % 2 === 0 ? "gold" : "red"}
+            />
+          </div>
         ))}
       </div>
       <DividerLine containerClasses="mx-5 desktop:hidden" />
+      <div id="contact" className="-translate-y-20" />
       <ContactSection />
     </div>
   );

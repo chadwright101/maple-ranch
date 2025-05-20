@@ -11,6 +11,7 @@ const ButtonLink = ({
   href = "#",
   disabled,
   ariaLabel,
+  target = "_self",
 }: ButtonProps) => {
   return (
     <Link
@@ -18,6 +19,8 @@ const ButtonLink = ({
       onClick={onClick}
       className={buttonStyles(color, cssClasses, disabled)}
       aria-label={ariaLabel}
+      target={target}
+      rel={target === "_blank" ? "noopener noreferrer" : undefined}
     >
       {children}
     </Link>

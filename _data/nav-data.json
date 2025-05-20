@@ -5,21 +5,12 @@
   },
   {
     "title": "Adventures",
-    "url": "/adventures"
+    "url": "/#adventures"
   },
   {
     "title": "Moss & Maple Restaurant",
-    "url": "/moss-&-maple-restaurant"
+    "url": "/#restaurant"
   },
-  {
-    "title": "Storage",
-    "url": "/storage"
-  },
-  {
-    "title": "Concerts",
-    "url": "/concerts"
-  },
-
   {
     "title": "Contact",
     "url": "/#contact"

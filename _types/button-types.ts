@@ -7,4 +7,5 @@ export interface ButtonProps {
   disabled?: boolean;
   ariaLabel?: string;
   type?: "submit" | "reset" | "button";
+  target?: "_self" | "_blank";
 }
