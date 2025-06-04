@@ -55,6 +55,9 @@ const MapComponent = ({ cssClasses }: Props) => {
       mapContainerClassName={cssClasses}
       onLoad={onMapLoad}
       onUnmount={onUnmount}
+      options={{
+        mapId: "maple-ranch-map",
+      }}
     />
   );
 };
