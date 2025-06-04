@@ -1,5 +1,5 @@
 import { GoogleMap, useLoadScript } from "@react-google-maps/api";
-import { useEffect, useRef } from "react";
+import { useCallback, useRef } from "react";
 
 interface Props {
   cssClasses?: string;
@@ -18,26 +18,26 @@ const MapComponent = ({ cssClasses }: Props) => {
     libraries,
   });
 
-  const onMapLoad = (map: google.maps.Map) => {
+  const onMapLoad = useCallback((map: google.maps.Map) => {
     mapRef.current = map;
-  };
 
-  useEffect(() => {
-    if (isLoaded && mapRef.current && !markerRef.current) {
+    // Create marker immediately when map loads
+    if (window.google?.maps?.marker?.AdvancedMarkerElement) {
       markerRef.current = new google.maps.marker.AdvancedMarkerElement({
-        map: mapRef.current,
+        map: map,
         position: { lat: -33.9831811088706, lng: 23.439345100276874 },
         title: "Maple Ranch",
       });
     }
+  }, []);
 
-    return () => {
-      if (markerRef.current) {
-        markerRef.current.map = null;
-        markerRef.current = null;
-      }
-    };
-  }, [isLoaded]);
+  const onUnmount = useCallback(() => {
+    if (markerRef.current) {
+      markerRef.current.map = null;
+      markerRef.current = null;
+    }
+    mapRef.current = null;
+  }, []);
 
   if (!isLoaded)
     return (
@@ -54,6 +54,7 @@ const MapComponent = ({ cssClasses }: Props) => {
       center={{ lat: -33.9875508, lng: 23.4324418 }}
       mapContainerClassName={cssClasses}
       onLoad={onMapLoad}
+      onUnmount={onUnmount}
     />
   );
 };
