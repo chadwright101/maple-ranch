@@ -33,7 +33,7 @@ export function DesktopHeader({ isScrolled }: HeaderProps) {
           "translate-y-1.5": isScrolled,
         })}
       >
-        <ul className="flex gap-2.5 items-center">
+        <ul className="flex gap-3 items-center">
           {navData.map(({ title, url }, id) => {
             return (
               <li key={id}>

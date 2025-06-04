@@ -18,8 +18,8 @@ const MapComponent = ({ cssClasses }: Props) => {
     );
   return (
     <GoogleMap
-      zoom={12.75}
-      center={{ lat: -33.9855202, lng: 23.4353273 }}
+      zoom={14.78}
+      center={{ lat: -33.9875508, lng: 23.4324418 }}
       mapContainerClassName={cssClasses}
     >
       <Marker position={{ lat: -33.9831811088706, lng: 23.439345100276874 }} />
