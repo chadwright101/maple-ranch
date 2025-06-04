@@ -10,21 +10,34 @@
   "offerings": [
     {
       "heading": "Adventures",
-      "description": "Maple Ranch Adventures offers transformative team building events and school camps in our unique farmyard setting just 15 minutes from Plettenberg Bay. Our spacious Farm Field accommodates diverse activities while providing a refreshing outdoor experience without leaving the city. For schools, we deliver customized programs with comfortable lodging, full catering, and professional facilitation focused on building leadership, confidence and connection. Our experienced team prioritizes safety and creates meaningful experiences for all participants in our picturesque horse ranch environment.",
-      "image1": "/images/home-page/offerings/adventures/Picture-2.jpg",
-      "image2": "/images/home-page/offerings/adventures/IMG_8272.jpg",
+      "paragraph": [
+        "Maple Ranch Adventures offers transformative team building events and school camps in our unique farmyard setting just 15 minutes from Plettenberg Bay. Our spacious Farm Field accommodates diverse activities while providing a refreshing outdoor experience without leaving the city.",
+        "For schools, we deliver customized programs with comfortable lodging, full catering, and professional facilitation focused on building leadership, confidence and connection. Our experienced team prioritizes safety and creates meaningful experiences for all participants in our picturesque horse ranch environment."
+      ],
+      "images": [
+        "/images/home-page/offerings/adventures/Picture-2.jpg",
+        "/images/home-page/offerings/adventures/IMG_8272.jpg"
+      ],
       "buttonUrl": "/adventures",
-      "phone": "+27 65 054 2562",
-      "email": "adventures@mapleranch.co.za"
+      "department": "adventures"
     },
     {
-      "heading": "Moss & Maple Restaurant",
-      "description": "Lorem ipsum dolor sit amet consectetur. Ut mauris augue volutpat rhoncus volutpat volutpat eget dui. Gravida est id tristique libero malesuada amet non at. Elementum sed praesent faucibus mattis. Volutpat consectetur nec orci erat praesent quam tortor egestas. Aliquet odio massa imperdiet ut nunc suscipit molestie purus. Placerat ipsum ultricies sed nascetur. Fames molestie ut mauris maecenas amet turpis.",
-      "image1": "/images/home-page/offerings/restaurant/20230407_083240.jpg",
-      "image2": "/images/home-page/offerings/restaurant/20230527_070121.jpg",
+      "heading": "Moss & Maple Restaurant and Farmstall",
+      "paragraph": [
+        "A large family restaurant resembling a typical North American Ranch house. Ideal for all ages due to the design and space, offering a well equiped and very popular play park, including quad cart and pony rides for kiddies and shaded or sunny decks and verandahs, log fires and a pub inside for adults wanting a quieter space.",
+        "We offer an extensive, affordable and unpretentious menu of fresh, wholesome and tasty food, the best milkshakes and coffees and a well stocked pub.",
+        "Built from exquisite Canadian Maple Wood and North American Oregon Pine, the 800sq meter building overlooks lawns, Lilly ponds and pine forest.",
+        "Entering the building you will pass through our shop where you will find gifts, art and crafts, toys, fire wood, ice, preserves, spices, sauces, clothing, novelties, sweets, ice creams, cookies, cakes and more. Some made on site and some sourced locally.",
+        "Adjacent to the restaurant and free play park is our **Maple Ranch Adventure Centre**, where we offer a range of fun activities and team building and leadership courses."
+      ],
+      "images": [
+        "/images/home-page/offerings/restaurant/20230407_083240.jpg",
+        "/images/home-page/offerings/restaurant/20230527_070121.jpg",
+        "/images/home-page/offerings/restaurant/20231221_153322.jpg",
+        "/images/home-page/offerings/restaurant/20250413_091930.jpg"
+      ],
       "buttonUrl": "/restaurant",
-      "phone": "+27 72 694 6801",
-      "email": "mossnmaple@gmail.com",
+      "department": "restaurant",
       "menuLink": "/files/moss_and_maple_menu.pdf"
     }
   ]

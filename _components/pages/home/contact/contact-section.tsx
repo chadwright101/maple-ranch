@@ -1,11 +1,9 @@
 "use client";
 
-import { useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
 
-import { fetchContactData } from "@/_actions/contact-actions";
 import ContactForm from "./contact-form";
+import ContactInfo from "@/_lib/utils/contact-info";
 import SocialIcons from "@/_lib/utils/social-icons";
 import MapComponent from "./map-component";
 
@@ -14,47 +12,8 @@ type ContactSectionProps = {
 };
 
 const ContactSection = ({ department = "general" }: ContactSectionProps) => {
-  const [showPhone, setShowPhone] = useState("Show phone number");
-  const [showEmail, setShowEmail] = useState("Show email address");
-  const [showspinnerPhone, setShowspinnerPhone] = useState(false);
-  const [showspinnerEmail, setShowspinnerEmail] = useState(false);
-
-  const handleShowPhoneNumber = async () => {
-    setShowspinnerPhone(true);
-    const contactData = await fetchContactData();
-
-    let phoneNumber = "";
-    if (department === "adventures") {
-      phoneNumber = contactData.adventuresPhone as string;
-    } else if (department === "restaurant") {
-      phoneNumber = contactData.restaurantPhone as string;
-    } else {
-      phoneNumber = contactData.generalPhone as string;
-    }
-
-    setShowPhone(phoneNumber);
-    setShowspinnerPhone(false);
-  };
-
-  const handleShowEmailAddress = async () => {
-    setShowspinnerEmail(true);
-    const contactData = await fetchContactData();
-
-    let emailAddress = "";
-    if (department === "adventures") {
-      emailAddress = contactData.adventuresEmail as string;
-    } else if (department === "restaurant") {
-      emailAddress = contactData.restaurantEmail as string;
-    } else {
-      emailAddress = contactData.generalEmail as string;
-    }
-
-    setShowEmail(emailAddress);
-    setShowspinnerEmail(false);
-  };
-
   return (
-    <section className="grid gap-10 px-5 pt-10 tablet:px-10 desktop:grid-cols-2">
+    <section className="grid gap-10 px-5 tablet:px-10 desktop:grid-cols-2">
       <div className="space-y-10">
         <div className="grid gap-10">
           <h2 className="text-heading font-passion-one border-b-4 border-gold leading-12">
@@ -62,58 +21,13 @@ const ContactSection = ({ department = "general" }: ContactSectionProps) => {
           </h2>
         </div>
         <div className="grid gap-5">
-          <div className="grid gap-1 phone:gap-3 items-center phone:grid-cols-[60px_1fr]">
-            <h3 className="text-subheading font-bold">Email:</h3>
-            {showEmail === "Show email address" ? (
-              <button
-                onClick={handleShowEmailAddress}
-                className="text-paragraph text-linkBlue py-3 px-2 -my-3 -mx-2 phone:text-left hover:cursor-pointer phone:self-start tablet:p-0 tablet:m-0 italic text-link tablet:hover:text-black/80"
-                aria-label="Show email address"
-              >
-                {showspinnerEmail ? (
-                  <div className="mx-auto spinner-contact phone:mx-0"></div>
-                ) : (
-                  showEmail
-                )}
-              </button>
-            ) : (
-              <Link
-                href={`mailto:${showEmail}`}
-                className="text-paragraph text-linkBlue phone:text-left tablet:hover:text-pink text-link tablet:hover:text-black/80"
-              >
-                {showEmail}
-              </Link>
-            )}
-          </div>
-          <div className="grid gap-1 phone:gap-3 items-center phone:grid-cols-[60px_1fr]">
-            <h3 className="text-subheading font-bold">Phone:</h3>
-            {showPhone === "Show phone number" ? (
-              <button
-                onClick={handleShowPhoneNumber}
-                className="text-paragraph text-linkBlue py-3 px-2 -my-3 -mx-2 hover:cursor-pointer phone:text-left tablet:p-0 tablet:m-0 italic text-link tablet:hover:text-black/80"
-                aria-label="Show phone number"
-              >
-                {showspinnerPhone ? (
-                  <div className="mx-auto spinner-contact phone:mx-0"></div>
-                ) : (
-                  showPhone
-                )}
-              </button>
-            ) : (
-              <Link
-                href={`tel:${showPhone}`}
-                className="text-paragraph text-linkBlue phone:text-left tablet:hover:text-pink text-link tablet:hover:text-black/80"
-              >
-                {showPhone}
-              </Link>
-            )}
-          </div>
+          <ContactInfo department={department} />
           <div className="grid gap-1 phone:gap-3 phone:grid-cols-[60px_1fr]">
             <h3 className="text-subheading font-bold">Address:</h3>
             <Link
               href="https://maps.app.goo.gl/FR5ykRdXtMJMcELG9"
               target="_blank"
-              className="text-paragraph text-linkBlue phone:text-left tablet:hover:text-pink text-link tablet:hover:text-black/80"
+              className="text-paragraph text-linkBlue mr-auto phone:text-left tablet:hover:text-pink text-link tablet:hover:text-black/80"
             >
               Farm 541 Cragsview, Plettenberg Bay, 6600
             </Link>

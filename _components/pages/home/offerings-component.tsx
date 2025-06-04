@@ -1,4 +1,5 @@
 import ButtonLink from "@/_components/ui/buttons/button-link";
+import ContactInfo from "@/_lib/utils/contact-info";
 import classNames from "classnames";
 import Image from "next/image";
 import Link from "next/link";
@@ -6,13 +7,11 @@ import Link from "next/link";
 interface OfferingsComponentProps {
   data: {
     heading: string;
-    description: string;
-    image1: string;
-    image2: string;
+    paragraph: string[];
+    images: string[];
     buttonUrl: string;
+    department: string;
     menuLink?: string;
-    phone: string;
-    email: string;
   };
   backgroundBlue?: boolean;
   index: number;
@@ -20,17 +19,26 @@ interface OfferingsComponentProps {
   buttonColor?: "red" | "gold";
 }
 
+const addLink = (text: string) => {
+  const parts = text.split(/\*\*(.*?)\*\*/g);
+  return parts.map((part, i) =>
+    i % 2 === 1 ? (
+      <Link
+        href="/#adventures"
+        key={i}
+        aria-label="Maple Ranch Adventures"
+        className="p-2 -m-2 desktop:p-0 desktop:m-0"
+      >
+        {part}
+      </Link>
+    ) : (
+      part
+    )
+  );
+};
+
 const OfferingsComponent = ({
-  data: {
-    heading,
-    description,
-    image1,
-    image2,
-    buttonUrl,
-    menuLink,
-    phone,
-    email,
-  },
+  data: { heading, paragraph, images, buttonUrl, department, menuLink },
   backgroundBlue,
   index,
   reverse,
@@ -62,71 +70,48 @@ const OfferingsComponent = ({
         >
           {heading}
         </h3>
-        <p className={classNames("", { "text-white": backgroundBlue })}>
-          {description}
-        </p>
-        <ul className="grid gap-5">
-          <li
-            className={classNames("flex gap-2 font-bold", {
-              "text-white": backgroundBlue,
-            })}
+        {paragraph.map((paragraph, index) => (
+          <p
+            key={index}
+            className={classNames({ "text-white": backgroundBlue })}
           >
-            Tel:{" "}
-            <Link
-              href={`tel:${phone}`}
-              className={classNames(
-                "p-2 -m-2 desktop:p-0 desktop:m-0 desktop:hover:opacity-80 ease-in-out duration-300",
-                {
-                  "text-white": backgroundBlue,
-                }
-              )}
-            >
-              {phone}
-            </Link>
-          </li>
-          <li
-            className={classNames("flex gap-2 font-bold", {
-              "text-white": backgroundBlue,
-            })}
-          >
-            Email:{" "}
-            <Link
-              href={`mailto:${email}`}
-              className={classNames(
-                "p-2 -m-2 desktop:p-0 desktop:m-0 desktop:hover:opacity-80 ease-in-out duration-300",
-                {
-                  "text-white": backgroundBlue,
-                }
-              )}
-              target="_blank"
-            >
-              {email}
-            </Link>
-          </li>
-          {menuLink && (
-            <li>
+            {addLink(paragraph)}
+          </p>
+        ))}
+        <div className="grid gap-5">
+          <ContactInfo
+            department={department}
+            whiteText={backgroundBlue}
+            smallGap
+          />
+          <div className="space-y-3">
+            {/* <ButtonLink color={buttonColor || "red"} href={buttonUrl}>
+              Learn More
+            </ButtonLink> */}
+            {menuLink && (
               <ButtonLink color="red" href={menuLink} target="_blank">
                 View Menu
               </ButtonLink>
-            </li>
-          )}
-        </ul>
+            )}
+          </div>
+        </div>
       </div>
       <div className="grid gap-10 tablet:grid-cols-2 desktop:col-span-2">
-        <Image
-          src={image1}
-          alt={`${heading} - Image 1`}
-          width={800}
-          height={800}
-          className="w-full h-full object-cover aspect-square phone:aspect-video"
-        />
-        <Image
-          src={image2}
-          alt={`${heading} - Image 2`}
-          width={800}
-          height={800}
-          className="w-full h-full object-cover aspect-square phone:aspect-video"
-        />
+        {images.map((image, index) => (
+          <Image
+            key={index}
+            src={image}
+            alt={`${heading} - Image ${index + 1}`}
+            width={800}
+            height={800}
+            className={classNames(
+              "w-full h-full object-cover aspect-square phone:aspect-video",
+              {
+                "hidden desktop:block": index > 1,
+              }
+            )}
+          />
+        ))}
       </div>
     </section>
   );

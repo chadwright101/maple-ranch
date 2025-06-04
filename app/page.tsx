@@ -13,6 +13,7 @@ export default function Home() {
     <div className="max-w-[1360px] space-y-10 mx-auto">
       <HeroComponent />
       <DividerLine containerClasses="mx-5 desktop:hidden" />
+      <div id="about" className="-translate-y-32" />
       <AboutComponent />
       <div>
         {offerings.map((offering, index) => (
@@ -21,7 +22,7 @@ export default function Home() {
               id={
                 offering.heading === "Adventures"
                   ? "adventures"
-                  : offering.heading === "Moss & Maple Restaurant"
+                  : offering.heading === "Moss & Maple Restaurant and Farmstall"
                   ? "restaurant"
                   : ""
               }
@@ -38,7 +39,7 @@ export default function Home() {
         ))}
       </div>
       <DividerLine containerClasses="mx-5 desktop:hidden" />
-      <div id="contact" className="-translate-y-20" />
+      <div id="contact" className="-translate-y-32" />
       <ContactSection />
     </div>
   );

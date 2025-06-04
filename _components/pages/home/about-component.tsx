@@ -16,31 +16,21 @@ const AboutComponent = () => {
             About Us
           </h2>
         </div>
-        <div className="desktop:grid gap-10 desktop:grid-cols-3">
+        <div className="desktop:grid gap-10 desktop:grid-cols-[1fr_1fr_250px]">
           <div className="space-y-4 desktop:order-last">
+            <p className="font-bold">Welcome to Maple Ranch.</p>
             <p>
-              Lorem ipsum dolor sit amet consectetur. Convallis nec amet
-              senectus porttitor praesent leo. Vitae suspendisse maecenas nulla
-              at. Volutpat quis amet aliquam vitae eget et quam. Elit proin id
-              eu mauris sapien a nec. Facilisi aenean ipsum elit ut malesuada
-              nec sed nulla pretium. Dui eu odio ornare felis dignissim sem.
-              Velit elementum aenean ultrices a tortor ut mauris felis. Nisi sit
-              interdum adipiscing in sed.
+              We trust you will thoroughly enjoy your visit to all we offer,
+              whether it be the Moss & Maple Restaurant, MR Adventure Centre,
+              Farm Shop, guest cabins, our rustic camp site, or simply to view
+              the beautiful horses of the Blue Haze American Quarter Horse Stud.
             </p>
             <p>
-              Enim enim malesuada aliquam pulvinar augue ornare felis lectus.
-              Urna euismod eget sed magna sed sit faucibus. Tortor tellus
-              ultricies venenatis ornare aliquet quisque eleifend. Eget eget
-              augue volutpat facilisi pharetra dictum. Tortor hendrerit massa in
-              aliquam.
-            </p>
-            <p>
-              A lectus quis bibendum vel et egestas id sit. Vulputate pulvinar
-              egestas risus id pharetra. Ac consequat dui urna venenatis neque
-              faucibus eu egestas mi. Velit sit velit tellus sed congue in id
-              eget. Vulputate magnis scelerisque in consectetur amet sit
-              ultricies suspendisse. Erat enim ipsum mollis egestas vel. Id odio
-              massa nullam elit turpis.
+              Maple Ranch is situated just ten kilometers North East of
+              Plettenberg Bay, conveniently positioned along the N2 motorway and
+              within five minutes of two beautiful blue flag beaches and bird,
+              primate, reptile, big cat, and elephant sanctuaries, wine farms,
+              Polo estates and more.
             </p>
           </div>
           <div className="grid gap-10 mt-10 tablet:grid-cols-3 desktop:grid-cols-2 desktop:mt-0 desktop:col-span-2">
