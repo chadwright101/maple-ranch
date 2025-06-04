@@ -5,6 +5,8 @@ interface Props {
   cssClasses?: string;
 }
 
+const libraries: "marker"[] = ["marker"];
+
 const MapComponent = ({ cssClasses }: Props) => {
   const mapRef = useRef<google.maps.Map | null>(null);
   const markerRef = useRef<google.maps.marker.AdvancedMarkerElement | null>(
@@ -13,7 +15,7 @@ const MapComponent = ({ cssClasses }: Props) => {
 
   const { isLoaded } = useLoadScript({
     googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY as string,
-    libraries: ["marker"],
+    libraries,
   });
 
   const onMapLoad = (map: google.maps.Map) => {
