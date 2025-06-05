@@ -50,7 +50,7 @@ const MapComponent = ({ cssClasses }: Props) => {
 
   return (
     <GoogleMap
-      zoom={17}
+      zoom={16}
       center={{ lat: -33.9836191, lng: 23.4394283 }}
       mapContainerClassName={cssClasses}
       onLoad={onMapLoad}
