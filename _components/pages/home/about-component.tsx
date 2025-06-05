@@ -18,7 +18,6 @@ const AboutComponent = () => {
         </div>
         <div className="desktop:grid gap-10 desktop:grid-cols-[1fr_1fr_250px]">
           <div className="space-y-4 desktop:order-last">
-            <p className="font-bold">Welcome to Maple Ranch.</p>
             <p>
               We trust you will thoroughly enjoy your visit to all we offer,
               whether it be the Moss & Maple Restaurant, MR Adventure Centre,

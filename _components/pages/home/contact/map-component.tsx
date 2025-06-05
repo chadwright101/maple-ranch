@@ -25,7 +25,7 @@ const MapComponent = ({ cssClasses }: Props) => {
     if (window.google?.maps?.marker?.AdvancedMarkerElement) {
       markerRef.current = new google.maps.marker.AdvancedMarkerElement({
         map: map,
-        position: { lat: -33.9831811088706, lng: 23.439345100276874 },
+        position: { lat: -33.9836191, lng: 23.4394283 },
         title: "Maple Ranch",
       });
     }
@@ -50,8 +50,8 @@ const MapComponent = ({ cssClasses }: Props) => {
 
   return (
     <GoogleMap
-      zoom={13.5}
-      center={{ lat: -33.9831811088706, lng: 23.439345100276874 }}
+      zoom={17}
+      center={{ lat: -33.9836191, lng: 23.4394283 }}
       mapContainerClassName={cssClasses}
       onLoad={onMapLoad}
       onUnmount={onUnmount}
