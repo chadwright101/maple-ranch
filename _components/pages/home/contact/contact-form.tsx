@@ -14,7 +14,7 @@ interface ContactFormProps {
 
 const ContactForm = ({ department }: ContactFormProps) => {
   const [submissionStartTime, setSubmissionStartTime] = useState(0);
-  const [validateRecaptcha, setValidateRecaptcha] = useState(false);
+  const [validateRecaptcha, setValidateRecaptcha] = useState(true);
   const [showEmailSubmitted, setShowEmailSubmitted] = useState(false);
   const [showMessage, setShowMessage] = useState(false);
 
@@ -163,7 +163,6 @@ const ContactForm = ({ department }: ContactFormProps) => {
                 type="submit"
                 cssClasses={classNames("tablet:self-start", {
                   "opacity-50 desktop:cursor-not-allowed": !validateRecaptcha,
-                  "hover:desktop:opacity-90": validateRecaptcha,
                 })}
                 disabled={!validateRecaptcha}
                 color="gold"

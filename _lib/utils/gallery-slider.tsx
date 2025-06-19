@@ -39,7 +39,7 @@ const HeroSlider = ({ cssClasses, data }: Props) => {
         <SwiperSlide key={index} className="pb-7">
           <Image
             src={slide}
-            alt={`Wild Compass - Image ${index + 1}`}
+            alt={`Maple Ranch - Image ${index + 1}`}
             className="w-full h-full object-cover"
             width={1360}
             height={650}

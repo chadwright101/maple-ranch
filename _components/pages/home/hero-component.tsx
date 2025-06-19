@@ -4,7 +4,9 @@ import GallerySlider from "@/_lib/utils/gallery-slider";
 
 import heroGalleryData from "@/_data/general-data.json";
 
-const { heroGallery } = heroGalleryData;
+const {
+  homePage: { heroGallery },
+} = heroGalleryData;
 
 const HeroComponent = () => {
   return (

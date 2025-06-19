@@ -5,8 +5,11 @@ import DividerLine from "@/_lib/utils/divider-line";
 import offeringsData from "@/_data/general-data.json";
 import OfferingsComponent from "@/_components/pages/home/offerings-component";
 import ContactSection from "@/_components/pages/home/contact/contact-section";
+import ReviewSlider from "@/_lib/utils/review-slider";
 
-const { offerings } = offeringsData;
+const {
+  homePage: { offerings, reviews },
+} = offeringsData;
 
 export default function Home() {
   return (
@@ -39,6 +42,7 @@ export default function Home() {
         ))}
       </div>
       <DividerLine containerClasses="mx-5 desktop:hidden" />
+      <ReviewSlider data={reviews} />
       <div id="contact" className="-translate-y-32" />
       <ContactSection />
     </div>

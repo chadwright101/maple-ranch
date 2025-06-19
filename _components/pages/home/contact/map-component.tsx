@@ -42,7 +42,7 @@ const MapComponent = ({ cssClasses }: Props) => {
   if (!isLoaded)
     return (
       <div
-        className={`bg-blue/20 grid place-items-center py-16 max-w-[1400px] ${cssClasses}`}
+        className={`bg-blue/20 grid place-items-center py-16 max-w-[1280px] ${cssClasses}`}
       >
         <p className="text-heading font-thin">Map loading...</p>
       </div>

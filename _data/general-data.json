@@ -1,44 +1,72 @@
 {
-  "heroGallery": [
-    "/images/hero-slider/IMG-20231018-WA0103.jpg",
-    "/images/hero-slider/20230407_083744.jpg",
-    "/images/hero-slider/restaurant.jpg",
-    "/images/hero-slider/20230407_084013.jpg",
-    "/images/hero-slider/Screenshot_20231202-180417_Facebook.jpg",
-    "/images/hero-slider/20240102_153437.jpg"
-  ],
-  "offerings": [
-    {
-      "heading": "Adventures",
-      "paragraph": [
-        "Maple Ranch Adventures offers transformative team building events and school camps in our unique farmyard setting just 15 minutes from Plettenberg Bay. Our spacious Farm Field accommodates diverse activities while providing a refreshing outdoor experience without leaving the city.",
-        "For schools, we deliver customized programs with comfortable lodging, full catering, and professional facilitation focused on building leadership, confidence and connection. Our experienced team prioritizes safety and creates meaningful experiences for all participants in our picturesque horse ranch environment."
-      ],
-      "images": [
-        "/images/home-page/offerings/adventures/Picture-2.jpg",
-        "/images/home-page/offerings/adventures/IMG_8272.jpg"
-      ],
-      "buttonUrl": "/adventures",
-      "department": "adventures"
-    },
-    {
-      "heading": "Moss & Maple Restaurant and Farmstall",
-      "paragraph": [
-        "A large family restaurant resembling a typical North American Ranch house. Ideal for all ages due to the design and space, offering a well equiped and very popular play park, including quad cart and pony rides for kiddies and shaded or sunny decks and verandahs, log fires and a pub inside for adults wanting a quieter space.",
-        "We offer an extensive, affordable and unpretentious menu of fresh, wholesome and tasty food, the best milkshakes and coffees and a well stocked pub.",
-        "Built from exquisite Canadian Maple Wood and North American Oregon Pine, the 800sq meter building overlooks lawns, Lilly ponds and pine forest.",
-        "Entering the building you will pass through our shop where you will find gifts, art and crafts, toys, fire wood, ice, preserves, spices, sauces, clothing, novelties, sweets, ice creams, cookies, cakes and more. Some made on site and some sourced locally.",
-        "Adjacent to the restaurant and free play park is our **Maple Ranch Adventure Centre**, where we offer a range of fun activities and team building and leadership courses."
-      ],
-      "images": [
-        "/images/home-page/offerings/restaurant/20230407_083240.jpg",
-        "/images/home-page/offerings/restaurant/20230527_070121.jpg",
-        "/images/home-page/offerings/restaurant/20231221_153322.jpg",
-        "/images/home-page/offerings/restaurant/20250413_091930.jpg"
-      ],
-      "buttonUrl": "/restaurant",
-      "department": "restaurant",
-      "menuLink": "/files/moss_and_maple_menu.pdf"
-    }
-  ]
+  "homePage": {
+    "heroGallery": [
+      "/images/hero-slider/IMG-20231018-WA0103.jpg",
+      "/images/hero-slider/20230407_083744.jpg",
+      "/images/hero-slider/restaurant.jpg",
+      "/images/hero-slider/20230407_084013.jpg",
+      "/images/hero-slider/Screenshot_20231202-180417_Facebook.jpg",
+      "/images/hero-slider/20240102_153437.jpg"
+    ],
+    "offerings": [
+      {
+        "heading": "MR Adventures",
+        "paragraph": [
+          "MR Adventures offers transformative team building events and school camps in our unique farmyard setting just 15 minutes from Plettenberg Bay. Our spacious Farm Field accommodates diverse activities while providing a refreshing outdoor experience without leaving the city.",
+          "For schools, we deliver customized programs with comfortable lodging, full catering, and professional facilitation focused on building leadership, confidence and connection. Our experienced team prioritizes safety and creates meaningful experiences for all participants in our picturesque horse ranch environment."
+        ],
+        "images": [
+          "/images/home-page/offerings/adventures/Picture-2.jpg",
+          "/images/home-page/offerings/adventures/IMG_8272.jpg"
+        ],
+        "buttonUrl": "/adventures",
+        "department": "adventures"
+      },
+      {
+        "heading": "Moss & Maple Restaurant and Farmstall",
+        "paragraph": [
+          "A large family restaurant resembling a typical North American Ranch house. Ideal for all ages due to the design and space, offering a well equiped and very popular play park, including quad cart and pony rides for kiddies and shaded or sunny decks and verandahs, log fires and a pub inside for adults wanting a quieter space.",
+          "We offer an extensive, affordable and unpretentious menu of fresh, wholesome and tasty food, the best milkshakes and coffees and a well stocked pub.",
+          "Built from exquisite Canadian Maple Wood and North American Oregon Pine, the 800sq meter building overlooks lawns, Lilly ponds and pine forest.",
+          "Entering the building you will pass through our shop where you will find gifts, art and crafts, toys, fire wood, ice, preserves, spices, sauces, clothing, novelties, sweets, ice creams, cookies, cakes and more. Some made on site and some sourced locally.",
+          "Adjacent to the restaurant and free play park is our **MR Adventure Centre**, where we offer a range of fun activities and team building and leadership courses."
+        ],
+        "images": [
+          "/images/home-page/offerings/restaurant/20230407_083240.jpg",
+          "/images/home-page/offerings/restaurant/20230527_070121.jpg",
+          "/images/home-page/offerings/restaurant/20231221_153322.jpg",
+          "/images/home-page/offerings/restaurant/20250413_091930.jpg"
+        ],
+        "buttonUrl": "/restaurant",
+        "department": "restaurant",
+        "menuLink": "/files/moss_and_maple_menu.pdf"
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Nikita Kindness",
+        "review": "Food is wholesome and really good value for money. The Amarula hot chocolate was amazing as well as the ranch salad and sloppy Joe tramezzini. Service was excellent. Staff exceptionally warm and friendly. Atmospheric vibe was also very homey, warm and relaxing. Spacious and not overcrowded. Don't have kiddies but the play area looked very enticing almost took my shoes off to join."
+      },
+      {
+        "name": "Xan-Lee Fraser",
+        "review": "Delicious food - we had the chicken mayo tramezzini. We were also greeted very warmly by the manager/owner. This place is especially good for kids as they have a play park and pony rides."
+      },
+      {
+        "name": "Gene Combrinck",
+        "review": "What a lovely place. My kids had such a good time with the massive play area and pony rides. The cowboy atmosphere of this place is so welcoming. The food was spectacular and of course the waiter Devolin was top notch. I would recommend this place to anyone and everyone travelling through this area. Thanx so much for a great time moss"
+      },
+      {
+        "name": "Kyle-Ross Rehse",
+        "review": "Wow, after a week in plett trying out many restaurants and venues. This was the best by far! Well priced and great atmosphere. Some of the tastiest pizzas we had and we LOVE pizza, excellent service from all of the staff and our kids had so much fun riding the ponies and enjoying the large playground. Definitely will be our go to when camping in plett again."
+      },
+      {
+        "name": "Kara Broli",
+        "review": "Wow!!! This is a wonderful place to visit with kids! And there's a separate area for if adults came alone and wanted some kids free space 😉 Service was excellent, food was fantastic, atmosphere was amazing. This place has soul!"
+      },
+      {
+        "name": "Griffin Huber",
+        "review": "Amazing food and services. Play area was amazing for the kids, and they loved the Pony rides. Originally thought it was just some cafe, but it was definitely worth the stop."
+      }
+    ]
+  }
 }
