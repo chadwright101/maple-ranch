@@ -4,7 +4,7 @@ const AboutComponent = () => {
   return (
     <div className="space-y-10 px-5 desktop:px-10">
       <Image
-        src="/images/home-page/20241116_111757.jpg"
+        src="/images/hero-slider/20231229_112048.jpg"
         alt="About us - Maple Ranch"
         width={750}
         height={750}
@@ -41,7 +41,7 @@ const AboutComponent = () => {
               className="hidden w-full h-full object-cover tablet:block desktop:aspect-auto desktop:h-[250px]"
             />
             <Image
-              src="/images/home-page/20241116_111757.jpg"
+              src="/images/home-page/20230422_233037.jpg"
               alt="About Us - Maple Ranch"
               width={400}
               height={400}
@@ -52,7 +52,7 @@ const AboutComponent = () => {
               alt="About Us - Maple Ranch"
               width={400}
               height={800}
-              className="w-full h-full object-cover aspect-square phone:aspect-video desktop:aspect-auto desktop:row-span-2"
+              className="w-full h-full object-cover aspect-square phone:aspect-video desktop:row-span-2"
             />
           </div>
         </div>

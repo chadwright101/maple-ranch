@@ -1,6 +1,7 @@
 {
   "homePage": {
     "heroGallery": [
+      "/images/hero-slider/20231229_112048.jpg",
       "/images/hero-slider/IMG-20231018-WA0103.jpg",
       "/images/hero-slider/20230407_083744.jpg",
       "/images/hero-slider/restaurant.jpg",
@@ -12,8 +13,8 @@
       {
         "heading": "MR Adventures",
         "paragraph": [
-          "MR Adventures offers transformative team building events and school camps in our unique farmyard setting just 15 minutes from Plettenberg Bay. Our spacious Farm Field accommodates diverse activities while providing a refreshing outdoor experience without leaving the city.",
-          "For schools, we deliver customized programs with comfortable lodging, full catering, and professional facilitation focused on building leadership, confidence and connection. Our experienced team prioritizes safety and creates meaningful experiences for all participants in our picturesque horse ranch environment."
+          "Maple Ranch Adventures offers a diverse range of outdoor fun and skill enriching activities from forest trails on 4x4 electric ATV Quads and lagoon or river kayaking, to team building events and school camps in our unique farmyard setting. Being only 10 minutes from Plettenberg Bay, our spacious Farm Field accommodates diverse activities while providing a refreshing outdoor experience without leaving the city.",
+          "For school groups, corporates and government departments we offer customized programs with comfortable lodging, full catering, and professional facilitation focused on building leadership, confidence and connection. Our experienced team prioritizes safety and creates meaningful experiences for all participants in our picturesque horse ranch environment."
         ],
         "images": [
           "/images/home-page/offerings/adventures/Picture-2.jpg",
@@ -33,9 +34,9 @@
         ],
         "images": [
           "/images/home-page/offerings/restaurant/20230407_083240.jpg",
-          "/images/home-page/offerings/restaurant/20230527_070121.jpg",
+          "/images/home-page/offerings/restaurant/20230407_082539.jpg",
           "/images/home-page/offerings/restaurant/20231221_153322.jpg",
-          "/images/home-page/offerings/restaurant/20250413_091930.jpg"
+          "/images/home-page/offerings/restaurant/20230527_070121.jpg"
         ],
         "buttonUrl": "/restaurant",
         "department": "restaurant",
@@ -83,6 +84,13 @@
         "name": "Cara Hartley",
         "review": "Fantastic, kid friendly, spacious place. Our new favourite stop on the N2. The highlight is obviously the huge, unique play area and the fact that there is both indoor and outdoor space for kids to play. You can see the facilities were designed by someone who knows kids. Plus, decent pizza, lovely milkshakes (try cookies and cream flavour!) and service that felt genuinely warm and friendly. Farm stall with plenty of handmade and homemade stuff, including cute Afrikaans stuff. Groups without kids can sit on the other side of the stoep and enjoy the view of the forest, river and pond. Looks like you could also take a little walk. So refreshing compared to most roadside stops."
       }
+    ]
+  },
+  "quarterHorsesPage": {
+    "heroGallery": [
+      "/images/quarter-horses/hero-slider/20241123_085655.jpg",
+      "/images/quarter-horses/hero-slider/20250513_150427.jpg",
+      "/images/quarter-horses/hero-slider/20250513_150605.jpg"
     ]
   }
 }
