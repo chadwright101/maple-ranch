@@ -62,15 +62,13 @@ const ContactSubsection = ({
 
   return (
     <div className={classNames("grid gap-5", cssClasses)}>
+      {title && <h3 className="text-subheading font-bold">{title}</h3>}
       <div
         className={classNames("grid gap-1 phone:gap-3 items-center", {
           "phone:grid-cols-[60px_1fr]": !smallGap,
           "phone:grid-cols-[45px_1fr]": smallGap,
         })}
       >
-        {title && (
-          <h3 className="col-span-2 text-subheading font-bold">{title}</h3>
-        )}
         <h4
           className={classNames("text-subheading", {
             "text-white": whiteText,
@@ -82,7 +80,7 @@ const ContactSubsection = ({
           <button
             onClick={handleShowEmailAddress}
             className={classNames(
-              "text-paragraph py-3 px-2 -my-3 -mx-2 phone:text-left hover:cursor-pointer phone:self-start tablet:p-0 tablet:m-0 italic tablet:hover:font-bold",
+              "text-paragraph py-3 px-2 -my-3 -mx-2 hover:cursor-pointer text-left tablet:p-0 tablet:m-0 italic tablet:hover:font-bold",
               {
                 "text-white": whiteText,
               }

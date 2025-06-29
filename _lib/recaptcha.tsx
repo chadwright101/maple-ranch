@@ -9,7 +9,6 @@ const Recaptcha = ({ onChange }: Props) => {
     <ReCAPTCHA
       sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY as string}
       onChange={onChange}
-      className="recaptcha"
     />
   );
 };
