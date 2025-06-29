@@ -2,28 +2,32 @@
 
 import { useState } from "react";
 import Link from "next/link";
-
-import { fetchContactData } from "@/_actions/contact-actions";
 import classNames from "classnames";
 
-type ContactInfoProps = {
-  department?: string;
+import { fetchContactData } from "@/_actions/contact-actions";
+
+type ContactSectionProps = {
+  title?: string;
+  department: string;
   whiteText?: boolean;
   smallGap?: boolean;
+  cssClasses?: string;
 };
 
-const ContactInfo = ({
-  department = "general",
+const ContactSubsection = ({
+  title,
+  department,
   whiteText,
   smallGap,
-}: ContactInfoProps) => {
+  cssClasses,
+}: ContactSectionProps) => {
   const [showPhone, setShowPhone] = useState("Show phone number");
   const [showEmail, setShowEmail] = useState("Show email address");
-  const [showspinnerPhone, setShowspinnerPhone] = useState(false);
-  const [showspinnerEmail, setShowspinnerEmail] = useState(false);
+  const [showSpinnerPhone, setShowSpinnerPhone] = useState(false);
+  const [showSpinnerEmail, setShowSpinnerEmail] = useState(false);
 
   const handleShowPhoneNumber = async () => {
-    setShowspinnerPhone(true);
+    setShowSpinnerPhone(true);
     const contactData = await fetchContactData();
 
     let phoneNumber = "";
@@ -36,11 +40,11 @@ const ContactInfo = ({
     }
 
     setShowPhone(phoneNumber);
-    setShowspinnerPhone(false);
+    setShowSpinnerPhone(false);
   };
 
   const handleShowEmailAddress = async () => {
-    setShowspinnerEmail(true);
+    setShowSpinnerEmail(true);
     const contactData = await fetchContactData();
 
     let emailAddress = "";
@@ -53,24 +57,27 @@ const ContactInfo = ({
     }
 
     setShowEmail(emailAddress);
-    setShowspinnerEmail(false);
+    setShowSpinnerEmail(false);
   };
 
   return (
-    <>
+    <div className={classNames("grid gap-5", cssClasses)}>
       <div
         className={classNames("grid gap-1 phone:gap-3 items-center", {
           "phone:grid-cols-[60px_1fr]": !smallGap,
           "phone:grid-cols-[45px_1fr]": smallGap,
         })}
       >
-        <h3
-          className={classNames("text-subheading font-bold", {
+        {title && (
+          <h3 className="col-span-2 text-subheading font-bold">{title}</h3>
+        )}
+        <h4
+          className={classNames("text-subheading", {
             "text-white": whiteText,
           })}
         >
           Email:
-        </h3>
+        </h4>
         {showEmail === "Show email address" ? (
           <button
             onClick={handleShowEmailAddress}
@@ -82,7 +89,7 @@ const ContactInfo = ({
             )}
             aria-label="Show email address"
           >
-            {showspinnerEmail ? (
+            {showSpinnerEmail ? (
               <div className="spinner-contact phone:mx-0"></div>
             ) : (
               showEmail
@@ -91,7 +98,7 @@ const ContactInfo = ({
         ) : (
           <Link
             href={`mailto:${showEmail}`}
-            className={classNames("text-paragraph mr-auto phone:text-left ", {
+            className={classNames("text-paragraph mr-auto phone:text-left", {
               "text-white desktop:hover:text-white/80": whiteText,
               "desktop:hover:text-black": !whiteText,
             })}
@@ -106,13 +113,13 @@ const ContactInfo = ({
           "phone:grid-cols-[45px_1fr]": smallGap,
         })}
       >
-        <h3
-          className={classNames("text-subheading font-bold", {
+        <h4
+          className={classNames("text-subheading", {
             "text-white": whiteText,
           })}
         >
           Phone:
-        </h3>
+        </h4>
         {showPhone === "Show phone number" ? (
           <button
             onClick={handleShowPhoneNumber}
@@ -124,7 +131,7 @@ const ContactInfo = ({
             )}
             aria-label="Show phone number"
           >
-            {showspinnerPhone ? (
+            {showSpinnerPhone ? (
               <div className="spinner-contact phone:mx-0"></div>
             ) : (
               showPhone
@@ -142,8 +149,8 @@ const ContactInfo = ({
           </Link>
         )}
       </div>
-    </>
+    </div>
   );
 };
 
-export default ContactInfo;
+export default ContactSubsection;

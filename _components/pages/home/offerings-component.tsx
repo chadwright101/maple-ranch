@@ -1,5 +1,5 @@
 import ButtonLink from "@/_components/ui/buttons/button-link";
-import ContactInfo from "@/_lib/utils/contact-info";
+import ContactSubsection from "@/_lib/utils/contact-subsection";
 import classNames from "classnames";
 import Image from "next/image";
 import Link from "next/link";
@@ -79,7 +79,7 @@ const OfferingsComponent = ({
           </p>
         ))}
         <div className="grid gap-5">
-          <ContactInfo
+          <ContactSubsection
             department={department}
             whiteText={backgroundBlue}
             smallGap
