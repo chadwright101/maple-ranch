@@ -1,5 +1,5 @@
 import { GoogleMap, useLoadScript } from "@react-google-maps/api";
-import { useCallback, useRef } from "react";
+import { useCallback, useRef, useEffect } from "react";
 
 interface Props {
   cssClasses?: string;
@@ -20,20 +20,62 @@ const MapComponent = ({ cssClasses }: Props) => {
 
   const onMapLoad = useCallback((map: google.maps.Map) => {
     mapRef.current = map;
-
-    // Create marker immediately when map loads
-    if (window.google?.maps?.marker?.AdvancedMarkerElement) {
-      markerRef.current = new google.maps.marker.AdvancedMarkerElement({
-        map: map,
-        position: { lat: -33.9836191, lng: 23.4394283 },
-        title: "Maple Ranch",
-      });
-    }
   }, []);
+
+  // Create marker after map is loaded and Google Maps API is ready
+  useEffect(() => {
+    if (!mapRef.current || !isLoaded) return;
+
+    const createMarker = async () => {
+      try {
+        // Wait a bit for the API to be fully ready
+        await new Promise((resolve) => setTimeout(resolve, 100));
+
+        // Check if AdvancedMarkerElement is available
+        if (window.google?.maps?.marker?.AdvancedMarkerElement) {
+          console.log("Creating AdvancedMarkerElement");
+          markerRef.current =
+            new window.google.maps.marker.AdvancedMarkerElement({
+              map: mapRef.current,
+              position: { lat: -33.9836191, lng: 23.4394283 },
+              title: "Maple Ranch",
+            });
+        } else {
+          // Fallback to regular marker
+          console.log("Falling back to regular Marker");
+          markerRef.current = new window.google.maps.Marker({
+            map: mapRef.current,
+            position: { lat: -33.9836191, lng: 23.4394283 },
+            title: "Maple Ranch",
+          }) as any;
+        }
+      } catch (error) {
+        console.error("Error creating marker:", error);
+        // Fallback to regular marker if AdvancedMarkerElement fails
+        try {
+          markerRef.current = new window.google.maps.Marker({
+            map: mapRef.current,
+            position: { lat: -33.9836191, lng: 23.4394283 },
+            title: "Maple Ranch",
+          }) as any;
+        } catch (fallbackError) {
+          console.error("Error creating fallback marker:", fallbackError);
+        }
+      }
+    };
+
+    createMarker();
+  }, [isLoaded]);
 
   const onUnmount = useCallback(() => {
     if (markerRef.current) {
-      markerRef.current.map = null;
+      // Handle both AdvancedMarkerElement and regular Marker cleanup
+      if ("map" in markerRef.current) {
+        markerRef.current.map = null;
+      }
+      if ("setMap" in markerRef.current) {
+        (markerRef.current as any).setMap(null);
+      }
       markerRef.current = null;
     }
     mapRef.current = null;
