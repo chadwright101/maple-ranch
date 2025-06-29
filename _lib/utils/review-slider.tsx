@@ -3,6 +3,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { useState, useEffect } from "react";
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -14,6 +15,57 @@ interface Props {
 }
 
 const ReviewSlider = ({ cssClasses, data }: Props) => {
+  const [expandedReviews, setExpandedReviews] = useState<{
+    [key: number]: boolean;
+  }>({});
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkScreenSize = () => {
+      setIsMobile(window.innerWidth < 600);
+    };
+
+    checkScreenSize();
+    window.addEventListener("resize", checkScreenSize);
+
+    return () => window.removeEventListener("resize", checkScreenSize);
+  }, []);
+
+  const toggleExpanded = (index: number) => {
+    setExpandedReviews((prev) => ({
+      ...prev,
+      [index]: !prev[index],
+    }));
+  };
+
+  const truncateText = (text: string, maxLength: number) => {
+    if (text.length <= maxLength) return text;
+    return text.substring(0, maxLength).trim() + "...";
+  };
+
+  const ReviewText = ({ review, index }: { review: string; index: number }) => {
+    const isExpanded = expandedReviews[index];
+    const shouldTruncate = isMobile && review.length > 250;
+    const displayText =
+      shouldTruncate && !isExpanded ? truncateText(review, 250) : review;
+
+    return (
+      <div>
+        <blockquote className="text-paragraph desktop:mx-20">
+          "{displayText}"
+        </blockquote>
+        {shouldTruncate && (
+          <button
+            onClick={() => toggleExpanded(index)}
+            className="text-link-blue mt-0.5 italic p-2"
+          >
+            {isExpanded ? "See less" : "See more"}
+          </button>
+        )}
+      </div>
+    );
+  };
+
   return (
     <div className="relative">
       <div className="overflow-x-hidden">
@@ -45,10 +97,8 @@ const ReviewSlider = ({ cssClasses, data }: Props) => {
           {data.map((review, index) => (
             <SwiperSlide key={index} className="pb-7">
               <div className="flex flex-col items-center justify-center text-center p-8 min-h-[300px]">
-                <blockquote className="text-lg md:text-xl text-gray-700 mb-6 max-w-4xl leading-relaxed">
-                  "{review.review}"
-                </blockquote>
-                <cite className="text-base font-semibold text-gray-900">
+                <ReviewText review={review.review} index={index} />
+                <cite className="text-base font-semibold text-gray-900 mt-2">
                   — {review.name}
                 </cite>
               </div>
