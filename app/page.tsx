@@ -1,5 +1,5 @@
 import AboutComponent from "@/_components/pages/home/about-component";
-import HeroComponent from "@/_components/pages/home/hero-component";
+import HeroComponent from "@/_lib/utils/hero-component";
 import DividerLine from "@/_lib/utils/divider-line";
 
 import offeringsData from "@/_data/general-data.json";
@@ -8,13 +8,13 @@ import ContactSection from "@/_components/pages/home/contact/contact-section";
 import ReviewSlider from "@/_lib/utils/review-slider";
 
 const {
-  homePage: { offerings, reviews },
+  homePage: { offerings, reviews, heroGallery },
 } = offeringsData;
 
 export default function Home() {
   return (
     <div className="max-w-[1360px] space-y-10 mx-auto">
-      <HeroComponent />
+      <HeroComponent galleryData={heroGallery} />
       <DividerLine containerClasses="mx-5 desktop:hidden" />
       <div id="about" className="-translate-y-32" />
       <AboutComponent />
