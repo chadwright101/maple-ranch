@@ -135,6 +135,10 @@ const ContactForm = ({}: ContactFormProps) => {
                   <option value="general">General</option>
                   <option value="restaurant">Restaurant</option>
                   <option value="adventures">Adventures</option>
+                  <option value="restaurant">Functions & concerts</option>
+                  <option value="general">Accommodation</option>
+                  <option value="general">Camping</option>
+                  <option value="general">Quarter Horses</option>
                 </select>
               </label>
               <label
