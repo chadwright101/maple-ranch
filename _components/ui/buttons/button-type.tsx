@@ -8,6 +8,7 @@ const ButtonType = ({
   onClick,
   cssClasses,
   color,
+  hoverTextColor = "blue",
   type = "submit",
   disabled = false,
 }: ButtonProps) => {
@@ -17,7 +18,13 @@ const ButtonType = ({
     <button
       type={type}
       onClick={onClick}
-      className={buttonStyles(color, cssClasses, disabled, pending)}
+      className={buttonStyles(
+        color,
+        hoverTextColor,
+        cssClasses,
+        disabled,
+        pending
+      )}
       disabled={disabled || pending}
     >
       {pending && type === "submit" ? (

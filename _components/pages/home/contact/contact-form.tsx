@@ -102,6 +102,7 @@ const ContactForm = ({}: ContactFormProps) => {
               cssClasses="tablet:self-start"
               onClick={() => setShowMessage(true)}
               color="gold"
+              hoverTextColor="white"
             >
               Next
             </ButtonType>
@@ -162,6 +163,7 @@ const ContactForm = ({}: ContactFormProps) => {
                 })}
                 disabled={!validateRecaptcha}
                 color="gold"
+                hoverTextColor="white"
               >
                 Submit
               </ButtonType>

@@ -8,6 +8,7 @@ const ButtonLink = ({
   onClick,
   cssClasses,
   color = "red",
+  hoverTextColor = "blue",
   href = "#",
   disabled,
   ariaLabel,
@@ -17,7 +18,7 @@ const ButtonLink = ({
     <Link
       href={href}
       onClick={onClick}
-      className={buttonStyles(color, cssClasses, disabled)}
+      className={buttonStyles(color, hoverTextColor, cssClasses, disabled)}
       aria-label={ariaLabel}
       target={target}
       rel={target === "_blank" ? "noopener noreferrer" : undefined}

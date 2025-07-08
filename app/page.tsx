@@ -23,7 +23,7 @@ export default function Home() {
           <div key={index}>
             <div
               id={
-                offering.heading === "Adventures"
+                offering.heading === "MR Adventures"
                   ? "adventures"
                   : offering.heading === "Moss & Maple Restaurant and Farmstall"
                   ? "restaurant"

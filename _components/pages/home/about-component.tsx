@@ -11,7 +11,7 @@ const AboutComponent = () => {
         className="w-full h-auto object-cover aspect-square phone:aspect-video tablet:hidden"
       />
       <main className="space-y-5">
-        <div className="grid desktop:grid-cols-3 gap-10">
+        <div className="grid desktop:grid-cols-[1fr_1fr_250px] gap-10">
           <h2 className="text-heading font-passion-one border-b-4 border-gold leading-12">
             About Us
           </h2>

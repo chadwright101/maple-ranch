@@ -3,6 +3,7 @@ export interface ButtonProps {
   onClick?: () => void;
   cssClasses?: string;
   color?: "red" | "gold";
+  hoverTextColor?: "blue" | "white";
   href?: string;
   disabled?: boolean;
   ariaLabel?: string;
