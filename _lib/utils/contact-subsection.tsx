@@ -61,7 +61,7 @@ const ContactSubsection = ({
   };
 
   return (
-    <div className={classNames("grid gap-5", cssClasses)}>
+    <div className={classNames("grid gap-5 desktop:gap-3", cssClasses)}>
       {title && <h3 className="text-subheading font-bold">{title}</h3>}
       <div
         className={classNames("grid gap-1 phone:gap-3 items-center", {

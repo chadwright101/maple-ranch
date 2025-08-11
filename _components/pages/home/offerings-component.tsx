@@ -79,6 +79,13 @@ const OfferingsComponent = ({
           </p>
         ))}
         <div className="grid gap-5">
+          <h4
+            className={classNames("text-subheading font-bold", {
+              "text-white": backgroundBlue,
+            })}
+          >
+            Contact
+          </h4>
           <ContactSubsection
             department={department}
             whiteText={backgroundBlue}
