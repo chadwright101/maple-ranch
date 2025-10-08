@@ -112,7 +112,7 @@ const OfferingsComponent = ({
             width={800}
             height={800}
             className={classNames(
-              "w-full h-full object-cover aspect-square phone:aspect-video",
+              "w-full h-auto object-cover aspect-square phone:aspect-video",
               {
                 "hidden desktop:block": index > 1,
               }
