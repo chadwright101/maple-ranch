@@ -9,7 +9,7 @@ interface OfferingsComponentProps {
     heading: string;
     paragraph: string[];
     images: string[];
-    buttonUrl: string;
+    buttonUrl?: string;
     department: string;
     menuLink?: string;
   };
@@ -17,6 +17,7 @@ interface OfferingsComponentProps {
   index: number;
   reverse?: boolean;
   buttonColor?: "red" | "gold";
+  hoverTextColor?: "white" | "blue";
 }
 
 const addLink = (text: string) => {
@@ -26,7 +27,7 @@ const addLink = (text: string) => {
       <Link
         href="/#adventures"
         key={i}
-        aria-label="Maple Ranch Adventures"
+        aria-label="MR Adventures"
         className="p-2 -m-2 desktop:p-0 desktop:m-0"
       >
         {part}
@@ -43,6 +44,7 @@ const OfferingsComponent = ({
   index,
   reverse,
   buttonColor,
+  hoverTextColor,
 }: OfferingsComponentProps) => {
   return (
     <section
@@ -92,9 +94,15 @@ const OfferingsComponent = ({
             smallGap
           />
           <div className="space-y-3">
-            {/* <ButtonLink color={buttonColor || "red"} href={buttonUrl}>
-              Learn More
-            </ButtonLink> */}
+            {buttonUrl && (
+              <ButtonLink
+                color={buttonColor || "red"}
+                href={buttonUrl}
+                hoverTextColor={hoverTextColor}
+              >
+                Learn More
+              </ButtonLink>
+            )}
             {menuLink && (
               <ButtonLink color="red" href={menuLink} target="_blank">
                 View Menu
@@ -105,9 +113,8 @@ const OfferingsComponent = ({
       </div>
       <div className="grid gap-10 tablet:grid-cols-2 desktop:col-span-2">
         {images.map((image, index) => (
-          <div>
+          <div key={index}>
             <Image
-              key={index}
               src={image}
               alt={`${heading} - Image ${index + 1}`}
               width={800}

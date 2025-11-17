@@ -22,16 +22,13 @@ const MapComponent = ({ cssClasses }: Props) => {
     mapRef.current = map;
   }, []);
 
-  // Create marker after map is loaded and Google Maps API is ready
   useEffect(() => {
     if (!mapRef.current || !isLoaded) return;
 
     const createMarker = async () => {
       try {
-        // Wait a bit for the API to be fully ready
         await new Promise((resolve) => setTimeout(resolve, 100));
 
-        // Check if AdvancedMarkerElement is available
         if (window.google?.maps?.marker?.AdvancedMarkerElement) {
           console.log("Creating AdvancedMarkerElement");
           markerRef.current =
@@ -41,7 +38,6 @@ const MapComponent = ({ cssClasses }: Props) => {
               title: "Maple Ranch",
             });
         } else {
-          // Fallback to regular marker
           console.log("Falling back to regular Marker");
           markerRef.current = new window.google.maps.Marker({
             map: mapRef.current,
@@ -51,7 +47,6 @@ const MapComponent = ({ cssClasses }: Props) => {
         }
       } catch (error) {
         console.error("Error creating marker:", error);
-        // Fallback to regular marker if AdvancedMarkerElement fails
         try {
           markerRef.current = new window.google.maps.Marker({
             map: mapRef.current,
@@ -69,7 +64,6 @@ const MapComponent = ({ cssClasses }: Props) => {
 
   const onUnmount = useCallback(() => {
     if (markerRef.current) {
-      // Handle both AdvancedMarkerElement and regular Marker cleanup
       if ("map" in markerRef.current) {
         markerRef.current.map = null;
       }

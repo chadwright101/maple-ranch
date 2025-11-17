@@ -1,8 +1,11 @@
+"use client";
+
 import { Footer } from "@/_components/navigation/footer/footer";
 import { Header } from "@/_components/navigation/header/header";
 import "@/_styles/globals.css";
 
 import { Passion_One, PT_Sans } from "next/font/google";
+import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
 
 const PassionOne = Passion_One({
   subsets: ["latin"],
@@ -24,9 +27,18 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${PTSans.variable} ${PassionOne.variable} antialiased`}>
-        <Header />
-        {children}
-        <Footer />
+        <GoogleReCaptchaProvider
+          reCaptchaKey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ""}
+          scriptProps={{
+            async: false,
+            defer: false,
+            appendTo: "head",
+          }}
+        >
+          <Header />
+          {children}
+          <Footer />
+        </GoogleReCaptchaProvider>
       </body>
     </html>
   );

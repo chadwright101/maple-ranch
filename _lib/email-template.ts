@@ -19,7 +19,7 @@ export const emailTemplate = ({
         <td>
           <h1 style="padding: 0 1rem; color: white">${
             department === "adventures"
-              ? "Maple Ranch Adventures"
+              ? "MR Adventures"
               : department === "restaurant"
               ? "Moss & Maple"
               : "Maple Ranch - General Enquiry"

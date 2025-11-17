@@ -12,7 +12,8 @@ export const buttonStyles = (
     cssClasses,
     {
       "bg-gold text-blue border-gold": color === "gold",
-      "desktop:hover:bg-transparent": color === "gold" && !disabled && !pending,
+      "desktop:hover:bg-transparent desktop:text-white":
+        color === "gold" && !disabled && !pending,
       "bg-red text-white border-red desktop:hover:bg-transparent":
         color === "red",
       "opacity-50 cursor-not-allowed hover:none": pending,

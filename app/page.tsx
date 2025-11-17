@@ -4,7 +4,7 @@ import DividerLine from "@/_lib/utils/divider-line";
 
 import offeringsData from "@/_data/general-data.json";
 import OfferingsComponent from "@/_components/pages/home/offerings-component";
-import ContactSection from "@/_components/pages/home/contact/contact-section";
+import ContactComponent from "@/_components/pages/contact-component";
 import ReviewSlider from "@/_lib/utils/review-slider";
 
 const {
@@ -16,20 +16,18 @@ export default function Home() {
     <div className="max-w-[1360px] space-y-10 mx-auto">
       <HeroComponent galleryData={heroGallery} />
       <DividerLine containerClasses="mx-5 desktop:hidden" />
-      <div id="about" className="-translate-y-32" />
+      <div id="about" className="scroll-mt-32" />
       <AboutComponent />
       <div>
         {offerings.map((offering, index) => (
           <div key={index}>
             <div
               id={
-                offering.heading === "MR Adventures"
-                  ? "adventures"
-                  : offering.heading === "Moss & Maple Restaurant and Farmstall"
+                offering.heading === "Moss & Maple Restaurant and Farmstall"
                   ? "restaurant"
                   : ""
               }
-              className="-translate-y-24"
+              className="scroll-mt-24"
             />
             <OfferingsComponent
               data={offering}
@@ -37,14 +35,15 @@ export default function Home() {
               backgroundBlue={index % 2 === 0}
               reverse={index % 2 === 0}
               buttonColor={index % 2 === 0 ? "gold" : "red"}
+              hoverTextColor={offering.hoverTextColor as "white" | "blue"}
             />
           </div>
         ))}
       </div>
       <DividerLine containerClasses="mx-5 desktop:hidden" />
       <ReviewSlider data={reviews} />
-      <div id="contact" className="-translate-y-32" />
-      <ContactSection />
+      <div id="contact" className="scroll-mt-32" />
+      <ContactComponent department="all" />
     </div>
   );
 }
