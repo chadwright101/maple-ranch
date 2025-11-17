@@ -105,19 +105,21 @@ const OfferingsComponent = ({
       </div>
       <div className="grid gap-10 tablet:grid-cols-2 desktop:col-span-2">
         {images.map((image, index) => (
-          <Image
-            key={index}
-            src={image}
-            alt={`${heading} - Image ${index + 1}`}
-            width={800}
-            height={800}
-            className={classNames(
-              "w-full h-auto object-cover aspect-square phone:aspect-video",
-              {
-                "hidden desktop:block": index > 1,
-              }
-            )}
-          />
+          <div>
+            <Image
+              key={index}
+              src={image}
+              alt={`${heading} - Image ${index + 1}`}
+              width={800}
+              height={800}
+              className={classNames(
+                "w-full h-full object-cover aspect-square phone:aspect-video",
+                {
+                  "hidden desktop:block": index > 1,
+                }
+              )}
+            />
+          </div>
         ))}
       </div>
     </section>
