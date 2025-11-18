@@ -3,7 +3,6 @@ import HeroComponent from "@/_lib/utils/hero-component";
 import heroGalleryData from "@/_data/general-data.json";
 import AboutComponent from "@/_components/pages/about-component";
 import SiresComponent from "@/_components/pages/quarter-horses/sires-component";
-import ContactComponent from "@/_components/pages/contact-component";
 
 const {
   quarterHorsesPage: { heroGallery, about },
