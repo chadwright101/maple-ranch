@@ -13,7 +13,7 @@ const {
 
 export default function Home() {
   return (
-    <div className="max-w-[1360px] space-y-10 mx-auto">
+    <div className="max-w-[1360px] space-y-15 mx-auto">
       <HeroComponent galleryData={heroGallery} />
       <DividerLine containerClasses="mx-5 desktop:hidden" />
       <div id="about" className="scroll-mt-32" />
@@ -40,8 +40,8 @@ export default function Home() {
           </div>
         ))}
       </div>
-      <DividerLine containerClasses="mx-5 desktop:hidden" />
-      <ReviewSlider data={reviews} />
+      <DividerLine containerClasses="mx-5 -mt-10 desktop:hidden" />
+      <ReviewSlider data={reviews} cssClasses="desktop:-mt-10" />
       <div id="contact" className="scroll-mt-32" />
       <ContactComponent department="all" />
     </div>

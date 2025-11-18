@@ -25,7 +25,7 @@ const addLink = (text: string) => {
   return parts.map((part, i) =>
     i % 2 === 1 ? (
       <Link
-        href="/#adventures"
+        href="/adventures"
         key={i}
         aria-label="MR Adventures"
         className="p-2 -m-2 desktop:p-0 desktop:m-0"
@@ -50,7 +50,7 @@ const OfferingsComponent = ({
     <section
       key={index}
       className={classNames(
-        "py-10 px-5 grid gap-10 desktop:px-10 desktop:grid-cols-3",
+        "py-15 px-5 grid gap-10 desktop:px-10 desktop:grid-cols-3",
         {
           "bg-blue": backgroundBlue,
         }

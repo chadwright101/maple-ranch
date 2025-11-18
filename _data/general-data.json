@@ -4,6 +4,7 @@
       "/images/hero-slider/20231229_112048.jpg",
       "/images/hero-slider/IMG-20231018-WA0103.jpg",
       "/images/hero-slider/20230407_083744.jpg",
+      "/images/adventures/hero-slider/4315243654.jpeg",
       "/images/hero-slider/restaurant.jpg",
       "/images/hero-slider/20230407_084013.jpg",
       "/images/hero-slider/Screenshot_20231202-180417_Facebook.jpg",
@@ -17,8 +18,8 @@
           "For school groups, corporate and government departments we offer customized programs with comfortable lodging, full catering, and professional facilitation focused on building leadership, confidence and connection. Our experienced team prioritizes safety and creates meaningful experiences for all participants in our picturesque horse ranch environment."
         ],
         "images": [
-          "/images/home-page/offerings/adventures/Picture-2.jpg",
-          "/images/home-page/offerings/adventures/IMG_8272.jpg"
+          "/images/home-page/offerings/adventures/20251107_141622.jpg",
+          "/images/home-page/offerings/adventures/20251107_143543.jpg"
         ],
         "buttonUrl": "/adventures",
         "department": "adventures",
@@ -138,9 +139,30 @@
         "/images/adventures/20251107_140722.jpg",
         "/images/adventures/20250912_081111.jpg",
         "/images/adventures/20251107_143049.jpg"
+      ]
+    },
+    "eQuadTours": {
+      "heading": "Guided E-Quad Tours",
+      "subheading": "And into the forest I go, to lose my mind and find my soul.",
+      "paragraph": [
+        "Our stealthy 4×4 quads are whisper quiet. Effortlessly float through the forest whilst taking in the sounds of nature. We offer stunning views and photo opportunities, you might even catch a glimpse of a whale in the bay.",
+        "Whether you're a seasoned pro or a first-time rider, our routes are designed to offer excitement and challenge for all skill levels. Our experienced guides will provide comprehensive safety briefings and ensure a fun and secure experience for everyone.",
+        "Escape the ordinary and embark on a unique adventure. Get ready to make memories that will last a lifetime!"
+      ],
+      "pricing": {
+        "title": "1 hour 30 min tour",
+        "price": "R850 pp",
+        "discount": "Book 4 or more",
+        "discountPrice": "R650 pp"
+      },
+      "hours": "Open Everyday 07:30 – 18:00",
+      "disclaimer": "Limited Tours Available — Book in Advance to Secure Your Spot",
+      "images": [
+        "/images/adventures/20251107_141622.jpg",
+        "/images/adventures/20251107_143849.jpg"
       ],
       "button": {
-        "text": "Get in touch",
+        "text": "Book Now",
         "href": "#contact"
       }
     }

@@ -35,6 +35,7 @@ const AboutComponent = ({
                 hoverTextColor="blue"
                 ariaLabel={button.text}
                 href={button.href}
+                cssClasses="mt-10"
               >
                 {button.text}
               </ButtonLink>
