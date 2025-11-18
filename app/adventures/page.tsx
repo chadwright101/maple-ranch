@@ -1,8 +1,41 @@
+import { generatePageMetadata } from "@/_lib/metadata";
 import HeroComponent from "@/_lib/utils/hero-component";
 import heroGalleryData from "@/_data/general-data.json";
 import AboutComponent from "@/_components/pages/about-component";
 import ContactComponent from "@/_components/pages/contact-component";
 import EquadToursComponent from "@/_components/pages/adventures/e-quad-tours";
+
+export const metadata = generatePageMetadata({
+  title:
+    "MR Adventures - E-Quad Tours & Team Building at Maple Ranch in Plettenberg Bay",
+  description:
+    "Experience guided electric quad bike tours through indigenous forests near Plettenberg Bay. Offering team building, school camps, kayaking, and outdoor adventures. Open daily 07:30-18:00. Book your E-Quad tour from R650pp.",
+  keywords: [
+    "MR Adventures",
+    "E-Quad tours Plettenberg Bay",
+    "electric quad bike tours Plett",
+    "forest trails Plettenberg Bay",
+    "team building Plett",
+    "school camps Plettenberg Bay",
+    "corporate team building",
+    "kayaking Plettenberg Bay",
+    "outdoor adventures Plett",
+    "ATV tours South Africa",
+    "guided quad tours",
+    "Keurbooms adventures",
+    "whale viewing Plett",
+    "electric quad bikes",
+  ],
+  path: "/adventures",
+  ogTitle:
+    "MR Adventures - E-Quad Tours & Team Building at Maple Ranch in Plettenberg Bay",
+  ogDescription:
+    "Whisper-quiet electric quad bike tours through indigenous forest, team building programs, and outdoor adventures near Plettenberg Bay. Book your adventure today!",
+  twitterTitle: "MR Adventures - E-Quad Tours & Outdoor Activities",
+  twitterDescription:
+    "Guided electric quad bike tours through indigenous forest and team building in Plettenberg Bay.",
+  ogImageAlt: "MR Adventures - E-Quad Tours & Outdoor Activities",
+});
 
 const {
   adventuresPage: { heroGallery, about, eQuadTours },
