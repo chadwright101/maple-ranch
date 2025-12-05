@@ -2,7 +2,6 @@
 
 import nodemailer from "nodemailer";
 import { emailTemplate } from "@/_lib/email-template";
-import DOMPurify from "isomorphic-dompurify";
 
 export interface EmailTemplateData {
   name: string;
@@ -34,15 +33,11 @@ export async function sendEmail(
       };
     }
 
-    const name = DOMPurify.sanitize(formData.get("name")?.toString() || "");
-    const email = DOMPurify.sanitize(formData.get("email")?.toString() || "");
-    const phone = DOMPurify.sanitize(formData.get("phone")?.toString() || "");
-    const department = DOMPurify.sanitize(
-      formData.get("department")?.toString() || ""
-    );
-    const message = DOMPurify.sanitize(
-      formData.get("message")?.toString() || ""
-    );
+    const name = (formData.get("name")?.toString() || "").trim();
+    const email = (formData.get("email")?.toString() || "").trim();
+    const phone = (formData.get("phone")?.toString() || "").trim();
+    const department = (formData.get("department")?.toString() || "").trim();
+    const message = (formData.get("message")?.toString() || "").trim();
 
     const emailHtmlContent = emailTemplate({
       name,
