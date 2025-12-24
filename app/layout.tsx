@@ -33,7 +33,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${PTSans.variable} ${PassionOne.variable} ${RyeFont.variable} antialiased`}>
+      <body
+        className={`${PTSans.variable} ${PassionOne.variable} ${RyeFont.variable} antialiased`}
+      >
         <RootLayoutClient>
           <Header />
           {children}
