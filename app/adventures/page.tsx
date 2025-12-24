@@ -4,6 +4,7 @@ import heroGalleryData from "@/_data/general-data.json";
 import AboutComponent from "@/_components/pages/about-component";
 import ContactComponent from "@/_components/pages/contact-component";
 import EquadToursComponent from "@/_components/pages/adventures/e-quad-tours";
+import PageWrapper from "@/_lib/page-wrapper";
 
 export const metadata = generatePageMetadata({
   title:
@@ -43,12 +44,14 @@ const {
 
 const AdventuresPage = () => {
   return (
-    <div className="max-w-[1360px] space-y-15 mx-auto">
+    <div className="max-w-[1360px] mx-auto">
       <HeroComponent galleryData={heroGallery} pageName="MR Adventures" />
-      <AboutComponent data={about} />
-      <EquadToursComponent data={eQuadTours} />
-      <div id="contact" className="scroll-mt-0" />
-      <ContactComponent department="adventures" />
+      <PageWrapper cssClasses="grid gap-15 pt-15">
+        <AboutComponent data={about} />
+        <EquadToursComponent data={eQuadTours} />
+        <div id="contact" className="scroll-mt-0" />
+        <ContactComponent department="adventures" />
+      </PageWrapper>
     </div>
   );
 };

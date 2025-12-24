@@ -13,9 +13,9 @@ const {
 
 export default function Home() {
   return (
-    <div className="max-w-[1280px] mx-auto">
+    <div className="max-w-[1360px] mx-auto">
       <HomePageHeroComponent />
-      <PageWrapper>
+      <PageWrapper cssClasses="flex flex-col gap-15 mt-15">
         <AboutNavigationComponent />
         <OfferingsComponent offerings={offerings} />
         <HomePageGalleryComponent />

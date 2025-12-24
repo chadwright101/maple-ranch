@@ -3,7 +3,7 @@ import navData from "@/_data/nav-data.json";
 
 export default function AboutNavigationComponent() {
   return (
-    <div className="flex flex-col tablet:flex-row gap-5 tablet:gap-[20px] py-15">
+    <div className="flex flex-col tablet:flex-row gap-5 tablet:gap-[20px]">
       <main className="flex flex-col gap-5 tablet:flex-1">
         <div>
           <h2 className="font-rye text-[40px] text-black uppercase">

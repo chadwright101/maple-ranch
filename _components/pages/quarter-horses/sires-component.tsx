@@ -8,12 +8,8 @@ const {
 
 const SiresComponent = () => {
   return (
-    <section className="space-y-10 px-5 desktop:px-10">
-      <div className="grid desktop:grid-cols-3 gap-10">
-        <h2 className="text-heading font-passion-one border-b-4 border-red leading-12">
-          Sire's
-        </h2>
-      </div>
+    <section className="grid gap-10">
+      <h2 className="text-[32px] tablet:text-[40px] font-rye">Sire's</h2>
       <div className="grid tablet:grid-cols-2 desktop:grid-cols-3 gap-10">
         {sires.map((image, index) => (
           <Image

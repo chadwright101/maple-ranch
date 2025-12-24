@@ -19,7 +19,7 @@ const ContactComponent = ({ department = "all" }: ContactComponentProps) => {
   const showAdventures = department === "all" || department === "adventures";
 
   return (
-    <section className="grid gap-10 py-15 desktop:grid-cols-2">
+    <section className="grid gap-10 desktop:grid-cols-2">
       <div className="grid gap-10">
         <h2 className="text-[32px] tablet:text-[40px] font-rye">Contact</h2>
         <div className="grid gap-5">

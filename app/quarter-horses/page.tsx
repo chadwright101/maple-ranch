@@ -4,6 +4,7 @@ import HeroComponent from "@/_lib/hero-component";
 import heroGalleryData from "@/_data/general-data.json";
 import AboutComponent from "@/_components/pages/about-component";
 import SiresComponent from "@/_components/pages/quarter-horses/sires-component";
+import PageWrapper from "@/_lib/page-wrapper";
 
 export const metadata = generatePageMetadata({
   title: "Blue Haze American Quarter Horse Stud | Maple Ranch Plettenberg Bay",
@@ -40,11 +41,13 @@ const {
 
 const QuarterHorses = () => {
   return (
-    <div className="max-w-[1360px] space-y-15 mx-auto">
+    <div className="max-w-[1360px] mx-auto">
       <HeroComponent galleryData={heroGallery} pageName="Quarter Horses" />
-      <AboutComponent data={about} />
-      <div id="sires" className="scroll-mt-0" />
-      <SiresComponent />
+      <PageWrapper cssClasses="grid gap-10 pt-15">
+        <AboutComponent data={about} />
+        <div id="sires" className="scroll-mt-0" />
+        <SiresComponent />
+      </PageWrapper>
     </div>
   );
 };

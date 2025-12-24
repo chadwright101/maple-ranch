@@ -8,9 +8,7 @@ interface HomePageHeroComponentProps {
 
 const HomePageHeroComponent = ({ cssClasses }: HomePageHeroComponentProps) => {
   return (
-    <section
-      className={classNames("relative tablet:-mx-5 desktop:-mx-10", cssClasses)}
-    >
+    <section className={classNames("relative", cssClasses)}>
       <Image
         src="/images/home-page/8a68bbb5ef8659ee65d9be6e01cebf472f4f3316.png"
         alt="Maple Ranch Hero Image"

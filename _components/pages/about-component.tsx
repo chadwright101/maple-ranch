@@ -17,13 +17,9 @@ const AboutComponent = ({
   data: { heading, paragraph, images, button },
 }: AboutComponentProps) => {
   return (
-    <div className="space-y-10 px-5 desktop:px-10">
-      <main className="space-y-5">
-        <div className="grid desktop:grid-cols-3 gap-10">
-          <h2 className="text-heading font-passion-one border-b-4 border-gold leading-12">
-            {heading}
-          </h2>
-        </div>
+    <div className="grid gap-10">
+      <main className="grid gap-5">
+        <h2 className="text-[32px] tablet:text-[40px] font-rye">{heading}</h2>
         <div className="desktop:grid gap-10 desktop:grid-cols-3">
           <div className="space-y-4 desktop:order-last">
             {paragraph.map((para, index) => (

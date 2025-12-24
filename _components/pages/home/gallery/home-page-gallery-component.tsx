@@ -13,10 +13,7 @@ interface Props {
 const HomePageGalleryComponent = ({ cssClasses }: Props) => {
   return (
     <section
-      className={classNames(
-        "flex flex-col gap-6 py-15 tablet:gap-10",
-        cssClasses
-      )}
+      className={classNames("flex flex-col gap-5 tablet:gap-10", cssClasses)}
     >
       <h2 className="font-rye text-[32px] tablet:text-[40px]">Gallery</h2>
       <HomePageGallerySlider data={gallery} />

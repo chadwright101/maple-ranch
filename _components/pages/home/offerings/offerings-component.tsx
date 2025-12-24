@@ -8,7 +8,7 @@ export default function OfferingsComponent({
   offerings,
 }: OfferingsComponentProps) {
   return (
-    <div className="bg-black py-15 -mx-5 px-5 tablet:-mx-7 tablet:px-7 desktop:-mx-10 desktop:px-10">
+    <div className="bg-black py-15 mx-5 px-5 tablet:-mx-7 tablet:px-7 desktop:-mx-10 desktop:px-10">
       <div className="grid gap-15">
         <div className="grid grid-cols-1 tablet:grid-cols-2 gap-15 tablet:grid-rows-1">
           {offerings.slice(0, 2).map((offering, index) => (
