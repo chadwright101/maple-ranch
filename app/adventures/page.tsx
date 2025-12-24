@@ -1,5 +1,5 @@
 import { generatePageMetadata } from "@/_lib/metadata";
-import HeroComponent from "@/_lib/utils/hero-component";
+import HeroComponent from "@/_lib/hero-component";
 import heroGalleryData from "@/_data/general-data.json";
 import AboutComponent from "@/_components/pages/about-component";
 import ContactComponent from "@/_components/pages/contact-component";
@@ -47,7 +47,7 @@ const AdventuresPage = () => {
       <HeroComponent galleryData={heroGallery} pageName="MR Adventures" />
       <AboutComponent data={about} />
       <EquadToursComponent data={eQuadTours} />
-      <div id="contact" className="scroll-mt-32" />
+      <div id="contact" className="scroll-mt-0" />
       <ContactComponent department="adventures" />
     </div>
   );

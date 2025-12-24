@@ -8,7 +8,6 @@ import useScrollPosition from "@/_lib/hooks/scroll-position";
 
 import { MobileHeader } from "./mobile/mobile-header";
 import { DesktopHeader } from "./desktop/desktop-header";
-import Image from "next/image";
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -23,18 +22,10 @@ export function Header() {
   }, [scrollPosition]);
 
   return (
-    <header
-      className={classNames(
-        "sticky left-0 border-b-2 border-blue/25 bg-white z-50 ease-in-out duration-500 desktop:duration-500",
-        {
-          "-top-5": isScrolled,
-          "top-0": !isScrolled,
-        }
-      )}
-    >
+    <header className="sticky left-0 border-b-4 border-black bg-gold z-50 ease-in-out duration-500 desktop:duration-500">
       <div className="max-w-[1360px] mx-auto relative desktop:px-15">
-        <MobileHeader isScrolled={isScrolled} />
-        <DesktopHeader isScrolled={isScrolled} />
+        <MobileHeader />
+        <DesktopHeader />
       </div>
     </header>
   );

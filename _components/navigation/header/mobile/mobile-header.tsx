@@ -9,11 +9,7 @@ import { X, AlignJustify } from "lucide-react";
 import navData from "@/_data/nav-data.json";
 import classNames from "classnames";
 
-export interface HeaderProps {
-  isScrolled: boolean;
-}
-
-export function MobileHeader({ isScrolled }: HeaderProps) {
+export function MobileHeader() {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
@@ -29,28 +25,18 @@ export function MobileHeader({ isScrolled }: HeaderProps) {
   }, [isOpen]);
 
   return (
-    <div className="px-5 py-5 ease-in-out duration-300 desktop:hidden">
+    <div className="px-5 pt-5 pb-4 desktop:hidden">
       <div className="flex w-full items-center justify-between">
-        <Link href="/" className="flex gap-2.5 items-center">
+        <Link href="/" className="flex gap-2.5">
           <Image
             src="/logo/maple-ranch-logo.png"
             alt="Maple Ranch logo"
             width={60}
             height={60}
             priority
-            className={classNames("w-auto h-[60px] ease-in-out duration-300", {
-              "scale-86 translate-y-2.5": isScrolled,
-            })}
+            className="w-auto h-[60px]"
           />
-          <h2
-            className={classNames(
-              "text-[24px] font-normal flex flex-col ease-in-out duration-300",
-              {
-                "mt-0": !isScrolled,
-                "-mt-32": isScrolled,
-              }
-            )}
-          >
+          <h2 className="text-[24px] font-normal flex flex-col">
             Maple Ranch{" "}
             <span className="text-[14px] -mt-6">Plettenberg Bay</span>
           </h2>
@@ -63,9 +49,7 @@ export function MobileHeader({ isScrolled }: HeaderProps) {
         >
           <AlignJustify
             color="#353C44"
-            className={classNames("h-12 w-12 p-2 ease-in-out duration-300", {
-              "translate-y-2.5": isScrolled,
-            })}
+            className="h-12 w-12 p-2"
             strokeWidth={2}
           />
         </button>
@@ -74,22 +58,15 @@ export function MobileHeader({ isScrolled }: HeaderProps) {
       {/* Slide-out Menu */}
       <div
         className={classNames(
-          "fixed inset-0 z-50 transform bg-blue/99 transition-transform duration-300 ease-in-out",
+          "fixed inset-0 z-50 transform bg-gold/99 transition-transform duration-300 ease-in-out",
           {
             "translate-x-full": !isOpen,
           }
         )}
       >
-        <div className="flex py-5 items-center justify-end px-5">
-          <button
-            onClick={() => setIsOpen(false)}
-            aria-label="Close menu"
-            className={classNames({
-              "-translate-x-1.5 -translate-y-1": isScrolled,
-              "-translate-x-1.5 translate-y-2": !isScrolled,
-            })}
-          >
-            <X color="#FFFFFF" className="h-12 w-12 p-2" strokeWidth={2} />
+        <div className="flex pt-7 pb-5 items-center justify-end pl-5 pr-3">
+          <button onClick={() => setIsOpen(false)} aria-label="Close menu">
+            <X color="#353C44" className="h-12 w-12 p-2" strokeWidth={2} />
           </button>
         </div>
         <nav className="px-7">
@@ -100,7 +77,7 @@ export function MobileHeader({ isScrolled }: HeaderProps) {
                   <Link
                     href={url}
                     onClick={() => setIsOpen(false)}
-                    className="text-[20px] text-white font-normal p-3 -m-3"
+                    className="text-[20px] text-black font-normal p-3 -m-3"
                   >
                     {title}
                   </Link>

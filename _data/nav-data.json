@@ -4,20 +4,24 @@
     "url": "/"
   },
   {
-    "title": "About",
-    "url": "/#about"
-  },
-  {
-    "title": "MR Adventures",
-    "url": "/adventures"
-  },
-  {
     "title": "Moss & Maple Restaurant",
     "url": "/#restaurant"
   },
   {
+    "title": "Maple Ranch Adventures",
+    "url": "/adventures"
+  },
+  {
+    "title": "Accommodation",
+    "url": "/#accommodation"
+  },
+  {
     "title": "Quarter Horses",
     "url": "/quarter-horses"
+  },
+  {
+    "title": "Horse Trails",
+    "url": "/#horse-trails"
   },
   {
     "title": "Contact",

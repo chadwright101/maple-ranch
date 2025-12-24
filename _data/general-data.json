@@ -1,5 +1,19 @@
 {
   "homePage": {
+    "gallery": [
+      "/images/home-page/gallery/hero-11.jpg",
+      "/images/home-page/gallery/hero-12.jpg",
+      "/images/home-page/gallery/hero-6.jpg",
+      "/images/home-page/gallery/hero-4.jpg",
+      "/images/home-page/gallery/hero-3.jpg",
+      "/images/home-page/gallery/hero-10.jpg",
+      "/images/home-page/gallery/hero-5.jpg",
+      "/images/home-page/gallery/hero-8.jpg",
+      "/images/home-page/gallery/hero-7.jpg",
+      "/images/home-page/gallery/hero-2.jpg",
+      "/images/home-page/gallery/hero-1.jpg",
+      "/images/home-page/gallery/hero-9.jpg"
+    ],
     "heroGallery": [
       "/images/hero-slider/20231229_112048.jpg",
       "/images/hero-slider/IMG-20231018-WA0103.jpg",
@@ -12,37 +26,81 @@
     ],
     "offerings": [
       {
-        "heading": "MR Adventures",
-        "paragraph": [
-          "MR Adventures will soon be offering a diverse range of outdoor fun and skill enriching activities from forest trails on 4x4 electric ATV Quads and lagoon or river kayaking, to team building events and school camps in our unique farmyard setting. Being only 10 minutes from Plettenberg Bay, our spacious Farm Field accommodates diverse activities while providing a refreshing outdoor experience without leaving the city.",
-          "For school groups, corporate and government departments we offer customized programs with comfortable lodging, full catering, and professional facilitation focused on building leadership, confidence and connection. Our experienced team prioritizes safety and creates meaningful experiences for all participants in our picturesque horse ranch environment."
-        ],
-        "images": [
-          "/images/home-page/offerings/adventures/20251107_141622.jpg",
-          "/images/home-page/offerings/adventures/20251107_143543.jpg"
-        ],
-        "buttonUrl": "/adventures",
-        "department": "adventures",
-        "hoverTextColor": "white"
+        "title": "Maple Ranch Adventures",
+        "description": "At MR Adventures we offer outdoor activities including 4x4 electric ATV trails, kiddies e-bikes, pony rides, horse trails, kayaking, team building, and school camps, plus numerous popular hiking and cycling trails from the property. Our experienced team ensures safe, meaningful experiences in a unique setting.",
+        "imageSrcDesktop": "/images/home-page/offerings/adventures-desktop.png",
+        "imageSrcMobile": "/images/home-page/offerings/adventures-mobile.jpg",
+        "layout": "side-by-side",
+        "contact": {
+          "department": "adventures",
+          "show": true
+        },
+        "buttons": {
+          "primary": {
+            "text": "View More",
+            "href": "/adventures"
+          },
+          "secondary": {
+            "text": "Bookings",
+            "href": "/adventures#contact"
+          }
+        }
       },
       {
-        "heading": "Moss & Maple Restaurant and Farmstall",
-        "paragraph": [
-          "A large family restaurant resembling a typical North American Ranch house. Ideal for all ages due to the design and space, offering a well equiped and very popular play park, including quad cart and pony rides for kiddies and shaded or sunny decks and verandahs, log fires and a pub inside for adults wanting a quieter space.",
-          "We offer an extensive, affordable and unpretentious menu of fresh, wholesome and tasty food, the best milkshakes and coffees and a well stocked pub.",
-          "Built from exquisite Canadian Maple Wood and North American Oregon Pine, the 800sq meter building overlooks lawns, Lilly ponds and pine forest.",
-          "Entering the building you will pass through our shop where you will find gifts, art and crafts, toys, fire wood, ice, preserves, spices, sauces, clothing, novelties, sweets, ice creams, cookies, cakes and more. Some made on site and some sourced locally.",
-          "Adjacent to the restaurant and free play park is our **MR Adventure Centre**, where we offer a range of fun activities and team building and leadership courses."
-        ],
-        "images": [
-          "/images/home-page/offerings/restaurant/20230407_083240.jpg",
-          "/images/home-page/offerings/restaurant/20230407_082539.jpg",
-          "/images/home-page/offerings/restaurant/20231221_153322.jpg",
-          "/images/home-page/offerings/restaurant/20230527_070121.jpg"
-        ],
-        "department": "restaurant",
-        "menuLink": "/files/moss_and_maple_menu.pdf",
-        "hoverTextColor": "blue"
+        "title": "Accommodation",
+        "description": "We offer cozy off-grid cabins, our famous Tiny House and camping facilities, with access to the on-site restaurant and pub. Conveniently located near two blue flag beaches, wildlife sanctuaries, kayaking hotspots and popular forest hiking and cycling trails from the Ranch",
+        "imageSrcDesktop": "/images/home-page/offerings/accommodation.avif",
+        "layout": "side-by-side",
+        "contact": {
+          "department": "general",
+          "show": true
+        },
+        "buttons": {
+          "primary": {
+            "text": "Tiny House Bookings",
+            "href": "https://www.airbnb.com/rooms/1299124430931295102",
+            "target": "_blank"
+          }
+        }
+      },
+      {
+        "title": "Moss & Maple Restaurant",
+        "description": "Our restaurant features an affordable menu, well-stocked pub, popular kids&apos; play park, pony rides, pump track with e bike hire and a shop offering locally-sourced gifts, treats, and handcrafted goods. We are pet friendly, allowing well behaved dogs on sections of our covered decks and on our lawns and shaded Pavilion.",
+        "imageSrcDesktop": "/images/home-page/offerings/restaurant.png",
+        "layout": "stacked",
+        "contact": {
+          "department": "restaurant",
+          "show": true
+        },
+        "buttons": {
+          "primary": {
+            "href": "/files/moss_and_maple_menu.pdf",
+            "text": "View Menu",
+            "target": "_blank"
+          }
+        }
+      },
+      {
+        "title": "Quarter Horses",
+        "description": "Established in 2010, the Blue Haze American Quarter Horse Stud breeds these athletic, intelligent and beautiful horses. Originally bred by and for the American cowboy for their even temperament and athleticism, visitors able to see our stud sire Bold Enterprise, brood mares, and new foals.",
+        "imageSrcDesktop": "/images/home-page/offerings/quarter-horses.png",
+        "layout": "stacked",
+        "buttons": {
+          "primary": {
+            "text": "View More",
+            "href": "/quarter-horses"
+          }
+        }
+      },
+      {
+        "title": "Horse Trails",
+        "description": "Offering 1-2 hour guided horse trails on our Blue Haze American Quarter Horses. Enjoy scenic MTO forests with ocean and mountain views. Limited to reasonably experienced riders under 100kg.",
+        "imageSrcDesktop": "/images/home-page/offerings/horse-trails.png",
+        "layout": "stacked",
+        "contact": {
+          "department": "adventures",
+          "show": true
+        }
       }
     ],
     "reviews": [
@@ -162,7 +220,7 @@
         "/images/adventures/20251107_143849.jpg"
       ],
       "button": {
-        "text": "Book Now",
+        "text": "Bookings",
         "href": "#contact"
       }
     }
